@@ -10,8 +10,11 @@
 
   width: 100%;
   height: 80px;
+  border-bottom: 2px solid var(--color-dove-gray);
 
   padding: 23px 0 10px 0;
+
+  z-index: 5;
 
   &__container {
     position: relative;
@@ -43,6 +46,8 @@
     top: auto;
     left: auto;
 
+    width: 100%;
+
     z-index: 5;
 
     @include mixins.respond-to(mobileOnly) {
@@ -71,8 +76,14 @@
   }
 
   &__mobile-inner {
-    padding: 40px 0 0 10px;
-    margin: auto;
+    display: flex;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+
+      padding: 40px 0 0 10px;
+      margin: auto;
+    }
   }
 
   &__nav-list {
@@ -80,22 +91,41 @@
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
+
+      margin: 0 0 40px 0;
     }
   }
 
   &__nav-item {
+    margin: 0 45px 0 0;
+    
+    &:last-child {
+      margin: 0;
+    }
+    
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
 
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 
   &__nav-link {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: var(--color-white);
+
+    padding-bottom: 5px;
 
     @include mixins.respond-to(mobileOnly) {
       display: inline-block;
@@ -105,15 +135,89 @@
       font-size: 18px;
 
       color: var(--color-mine-shaft);
+
+      padding-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-buttercup);
+
+      transition: 0.3s;
+    }
+
+    &:hover::before {
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    &:active {
+      color: var(--color-buttercup);
+
+      transition: all 0.1s;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--color-buttercup);
+      outline-offset: 3px;
+
+      transition: all 0.1s;
     }
   }
 
   &__tel-link {
+    position: relative;
+
     display: flex;
     align-items: center;
 
+    overflow: hidden;
+
+    padding-bottom: 5px;
+    margin-left: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-buttercup);
+
+      transition: 0.3s;
+    }
+
+    &:hover::before {
+      left: 0;
+
+      transition: all 0.3s;
+    }
+
+    &:active .main-nav__tel-text{
+      color: var(--color-buttercup);
+
+      transition: all 0.1s;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--color-buttercup);
+      outline-offset: 3px;
+
+      transition: all 0.1s;
+    }
+
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
+
+      padding-bottom: 0;
     }
   }
 
@@ -132,6 +236,8 @@
     font-size: 16px;
     line-height: 24px;
     color: var(--color-white);
+
+    transition: 0.3s;
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 18px;
