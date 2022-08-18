@@ -1,0 +1,85 @@
+@use "../mixins";
+
+.heading {
+
+  height: 860px;
+  
+  @include mixins.respond-to(mobileOnly) {
+    height: 100vh;
+
+    min-height: 500px;
+  }
+
+  &__slider {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slider-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+
+    color: white;
+    
+    margin: 0 auto;
+  }
+
+  &__info-title {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--color-white);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 25px;
+
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info-subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--color-white);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 20px;
+
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info-button {
+    width: 270px;
+    height: 50px;
+
+    background: linear-gradient(160.58deg, #FFDC5E 15.73%, #F6BB1A 88.93%);
+    border-radius: 70px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-mine-shaft);
+  }
+}

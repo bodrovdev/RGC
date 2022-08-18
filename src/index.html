@@ -12,22 +12,27 @@
 				<figure class="main-nav__logo-block base-figure">
 					<img class="main-nav__logo-img" src="img/image/design/logo.svg" width="114" height="47" alt="Логотип">
 				</figure>
-				<ul class="main-nav__nav-list base-list">
-					<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#"></a></li>
-					<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#"></a></li>
-					<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#"></a></li>
-					<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#"></a></li>
-					<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#"></a></li>
-				</ul>
-				<a class="main-nav__tel-link" href="#">
-					<span class="main-nav__tel-text"></span>
-				</a>
+				<div class="main-nav__mobile-menu" id="nav-mobile-menu">
+					<div class="main-nav__mobile-inner">
+						<ul class="main-nav__nav-list base-list">
+							<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#">О компании</a></li>
+							<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#">Инжиниринговые услуги</a></li>
+							<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#">Консалтинговые услуги</a></li>
+							<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#">Готовые документы</a></li>
+							<li class="main-nav__nav-item"><a class="main-nav__nav-link base-link" href="#">Контакты</a></li>
+						</ul>
+						<a class="main-nav__tel-link base-link" href="tel:+79163899399">
+							<svg class="main-nav__tel-icon" width="15" height="15" alt="">
+								<use href="img/icon/sprite.svg#tel-icon"></use>
+							</svg>
+							<span class="main-nav__tel-text">+7 916 389 93 99</span>
+						</a>
+					</div>
+				</div>
+				<button class="main-nav__burger base-button" type="button" id="nav-burger">
+					<span class="main-nav__burger-line"></span>
+				</button>
 			</div>
-			<button class="main-nav__burger base-button" type="button">
-				<span class="main-nav__burger-line"></span>
-				<span class="main-nav__burger-line"></span>
-				<span class="main-nav__burger-line"></span>
-			</button>
 		</nav>
 
 		<section class="heading">
@@ -36,41 +41,69 @@
 				<div class="heading__slider-wrapper swiper-wrapper">
 					<div class="heading__slider-item swiper-slide">
 						<div class="heading__info-block">
-							<h2 class="heading__info-title base-title"></h2>
-							<span class="heading__info-subtitle"></span>
-							<button class="heading__info-button base-button" type="button"></button>
+							<span class="heading__info-title base-title">получи бесплатно<br>проект готового документа</span>
+							<span class="heading__info-subtitle">при заказе консультации</span>
+							<button class="heading__info-button base-button" type="button">Заказать консультацию</button>
 						</div>
+						<style>
+							.heading__slider-item {
+								background: linear-gradient(120.71deg, rgba(0, 0, 0, 0.73) 15.78%, rgba(0, 0, 0, 0.3066) 107.51%), linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("img/image/design/heading-slide-1.png");
+								background-position: center;
+								background-size: cover;
+							}
+						</style>
+					</div>
+					<div class="heading__slider-item swiper-slide">
+						<div class="heading__info-block">
+							<span class="heading__info-title base-title">получи бесплатно
+								проект готового документа</span>
+							<span class="heading__info-subtitle">при заказе консультации</span>
+							<button class="heading__info-button base-button" type="button">Заказать консультацию</button>
+						</div>
+						<style>
+							.heading__slider-item {
+								background: linear-gradient(120.71deg, rgba(0, 0, 0, 0.73) 15.78%, rgba(0, 0, 0, 0.3066) 107.51%), linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("img/image/design/heading-slide-1.png");
+							}
+						</style>
 					</div>
 				</div>
 				<div class="heading__slider-pagination swiper-pagination"></div>
 			</div>
 			<div class="heading__features features">
 				<div class="features__item">
-					<svg class="features__item-graphic"></svg>
+					<svg class="features__item-graphic" width="13" height="13" alt="">
+						<use href="img/icon/sprite.svg#cross-icon"></use>
+					</svg>
 					<div class="features__item-info">
-						<span class="features__item-title"></span>
-						<span class="features__item-desc"></span>
+						<span class="features__item-title">12 лет</span>
+						<span class="features__item-desc">в сфере управления проектами</span>
 					</div>
 				</div>
 				<div class="features__item">
-					<svg class="features__item-graphic"></svg>
+					<svg class="features__item-graphic" width="13" height="13" alt="">
+						<use href="img/icon/sprite.svg#cross-icon"></use>
+					</svg>
 					<div class="features__item-info">
-						<span class="features__item-title"></span>
-						<span class="features__item-desc"></span>
+						<span class="features__item-title">30 +</span>
+						<span class="features__item-desc">реализованных проектов</span>
 					</div>
 				</div>
 				<div class="features__item">
-					<svg class="features__item-graphic"></svg>
+					<svg class="features__item-graphic" width="13" height="13" alt="">
+						<use href="img/icon/sprite.svg#cross-icon"></use>
+					</svg>
 					<div class="features__item-info">
-						<span class="features__item-title"></span>
-						<span class="features__item-desc"></span>
+						<span class="features__item-title">до 40%</span>
+						<span class="features__item-desc">экономия времени клиента</span>
 					</div>
 				</div>
 				<div class="features__item">
-					<svg class="features__item-graphic"></svg>
+					<svg class="features__item-graphic" width="13" height="13" alt="">
+						<use href="img/icon/sprite.svg#cross-icon"></use>
+					</svg>
 					<div class="features__item-info">
-						<span class="features__item-title"></span>
-						<span class="features__item-desc"></span>
+						<span class="features__item-title">975</span>
+						<span class="features__item-desc">обращений к нам за консультацией</span>
 					</div>
 				</div>
 			</div>
