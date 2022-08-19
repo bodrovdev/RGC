@@ -4,4 +4,9 @@
   font-size: 40px;
   line-height: 47px;
   color: var(--color-mine-shaft);
+
+  @include mixins.respond-to(mobileOnly) {
+    font-size: 25px;
+    line-height: 130%;
+  }
 }

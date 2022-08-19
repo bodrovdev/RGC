@@ -111,10 +111,7 @@
     z-index: 5;
 
     @include mixins.respond-to(mobileOnly) {
-      position: relative;
-      bottom: auto;
-      left: auto;
-      transform: none;
+      display: none !important;
     }
   }
 }

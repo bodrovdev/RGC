@@ -22,10 +22,16 @@
 @use 'global/fonts';
 
 //БЭМ блоки
+@use 'blocks/section-title';
+
 @use 'blocks/page-header';
 @use 'blocks/page-content';
-@use 'blocks/page-footer';@use 'blocks/main-nav';
+@use 'blocks/page-footer';
+@use 'blocks/main-nav';
 @use 'blocks/heading';
 @use 'blocks/features';
 @use 'blocks/about';
-@use 'blocks/section-title';
+@use 'blocks/engin';
+
+@use 'blocks/footer-feedback';
+@use 'blocks/consult';
