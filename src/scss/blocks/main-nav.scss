@@ -1,5 +1,85 @@
 @use "../mixins";
 
+@keyframes burger_before_default {
+  from {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  50% {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  to {
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes burger_before {
+  from {
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@keyframes burger_after_default {
+  from {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  50% {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  to {
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes burger_after {
+  from {
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
 .main-nav {
   position: absolute;
   top: 0;
@@ -262,50 +342,6 @@
     }
   }
 
-  @keyframes burger_before {
-    from {
-      top: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    50% {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    100% {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%) rotate(45deg);
-    }
-  }
-
-  @keyframes burger_after {
-    from {
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    50% {
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-
-      transition: 0.3s;
-    }
-
-    100% {
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) rotate(-45deg);
-
-      transition: 0.3s;
-    }
-  }
-
   &__burger-line {
     position: relative;
 
@@ -327,7 +363,7 @@
       background-color: var(--color-white);
 
       animation-duration: 0.3s;
-      animation-name: burger_before_reverse;
+      animation-name: burger_before_default;
       animation-fill-mode: forwards;
 
       transition: all 0.3s;
@@ -345,7 +381,7 @@
       background-color: var(--color-white);
 
       animation-duration: 0.3s;
-      animation-name: burger_after_reverse;
+      animation-name: burger_after_default;
       animation-fill-mode: forwards;
 
       transition: all 0.3s;

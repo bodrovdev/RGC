@@ -2,6 +2,7 @@
 @use 'global/variables';
 @use 'global/visually-hidden';
 @use 'node_modules/swiper/swiper-bundle.min.css';
+@use 'node_modules/glightbox/dist/css/glightbox.min.css';
 
 //Миксины
 @use 'mixins/font-face';
@@ -26,3 +27,5 @@
 @use 'blocks/page-footer';@use 'blocks/main-nav';
 @use 'blocks/heading';
 @use 'blocks/features';
+@use 'blocks/about';
+@use 'blocks/section-title';
