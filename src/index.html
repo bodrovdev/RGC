@@ -6,6 +6,7 @@
 })
 
 <body>
+	@@include('components/bam-blocks/_modal-consult.html')
 	<header class="page-header">
 		<nav class="main-nav">
 			<div class="main-nav__container base-container">
@@ -45,7 +46,7 @@
 						<div class="heading__info-block">
 							<span class="heading__info-title base-title">получи бесплатно <br> проект готового документа</span>
 							<span class="heading__info-subtitle">при заказе консультации</span>
-							<button class="heading__info-button base-button" type="button">Заказать консультацию</button>
+							<button class="heading__info-button base-button" type="button" id="modal-consult-open">Заказать консультацию</button>
 						</div>
 						<style>
 							.heading__slider-item {
@@ -301,7 +302,7 @@
 			</div>
 		</section>
 
-		@@include('components/bam-blocks/_callback.html');
+		@@include('components/bam-blocks/_callback.html')
 
 		<section class="documents">
 			<div class="documents__container base-container">
@@ -385,8 +386,12 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="reviews">
+
+		</section>
 	</main>
-	<!-- @@include('components/base-blocks/_base-footer.html'); -->
+	<!-- @@include('components/base-blocks/_base-footer.html') -->
 	<script src="js/index.min.js"></script>
 </body>
 
