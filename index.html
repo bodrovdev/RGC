@@ -19,6 +19,32 @@
 </head>
 
 <body>
+	<section class="consultation" id="modal-consult">
+  <div class="consultation__wrapper">
+    <button class="consultation__close-button base-button" id="modal-consult-close">
+      <div class="consultation__close-inner"></div>
+    </button>
+    <div class="consultation__inner">
+      <h2 class="consultation__title base-title">Заказать консультацию</h2>
+      <form class="consultation__form" method="post" action="#" >
+        <input class="consultation__input" type="text" placeholder="Ваше имя">
+        <input class="consultation__input" type="tel" placeholder="Телефон">
+        <input class="consultation__input" type="email" placeholder="Email">
+        <button class="consultation__submit base-button">
+          <span class="consultation__submit-text">Отправить</span>
+          <svg class="consultation__icon" width="20" height="15" alt="">
+            <use href="img/icon/sprite.svg#white-arrow-icon"></use>
+          </svg>
+        </button>
+      </form>
+      <p class="consultation__datacheck base-par">
+        Нажимая на кнопку отправить, вы подтверждаете 
+        свое согласие на обработку 
+        пользовательских данных
+      </p>
+    </div>
+  </div>
+</section>
 	<header class="page-header">
 		<nav class="main-nav">
 			<div class="main-nav__container base-container">
@@ -58,7 +84,7 @@
 						<div class="heading__info-block">
 							<span class="heading__info-title base-title">получи бесплатно <br> проект готового документа</span>
 							<span class="heading__info-subtitle">при заказе консультации</span>
-							<button class="heading__info-button base-button" type="button">Заказать консультацию</button>
+							<button class="heading__info-button base-button" type="button" id="modal-consult-open">Заказать консультацию</button>
 						</div>
 						<style>
 							.heading__slider-item {
@@ -357,7 +383,7 @@
       </div>
     </figure>
   </div>
-</section>;
+</section>
 
 		<section class="documents">
 			<div class="documents__container base-container">
@@ -440,6 +466,10 @@
 					</div>
 				</div>
 			</div>
+		</section>
+
+		<section class="reviews">
+
 		</section>
 	</main>
 	
