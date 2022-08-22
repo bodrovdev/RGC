@@ -34,6 +34,8 @@
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
 
+      width: 100%;
+
       margin-bottom: 30px;
     }
   }
@@ -64,6 +66,8 @@
     }
 
     @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+
       margin: 0 0 10px 0;
 
       &:last-child {
@@ -99,6 +103,8 @@
     margin-left: auto;
 
     @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      
       margin: 0;
     }
   }
@@ -151,7 +157,7 @@
     }
 
     @include mixins.respond-to(mobileOnly) {
-      width: 290px;
+      width: 100%;
       height: auto;
 
       margin: 0 0 10px 0;

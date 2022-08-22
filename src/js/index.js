@@ -19,8 +19,8 @@ burger.addEventListener('click', () => {
 
 //Табы в блоке engine
 
-let engineTabsButtons = document.querySelectorAll('.engin__tabs-button');
-let engineTabsItems = document.querySelectorAll('.engin__tabs-itemset');
+let engineTabsButtons = document.querySelectorAll('.engine__tabs-button');
+let engineTabsItems = document.querySelectorAll('.engine__tabs-itemset');
 
 engineTabsButtons.forEach((item) => {
   item.addEventListener('click', (e) => {
@@ -29,14 +29,14 @@ engineTabsButtons.forEach((item) => {
     const id = e.target.getAttribute('href').replace('#', '');
 
     engineTabsButtons.forEach(
-      (child) => child.classList.remove('engin__tabs-button--active')
+      (child) => child.classList.remove('engine__tabs-button--active')
     );
     engineTabsItems.forEach(
-      (child) => child.classList.remove('engin__tabs-itemset--active')
+      (child) => child.classList.remove('engine__tabs-itemset--active')
     );
 
-    item.classList.add('engin__tabs-button--active');
-    document.getElementById(id).classList.add('engin__tabs-itemset--active');
+    item.classList.add('engine__tabs-button--active');
+    document.getElementById(id).classList.add('engine__tabs-itemset--active');
   })
 })
 
