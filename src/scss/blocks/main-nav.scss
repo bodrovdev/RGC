@@ -161,7 +161,7 @@
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
 
-      padding: 40px 0 0 10px;
+      padding: 40px 0 0 5%;
       margin: auto;
     }
   }
@@ -178,11 +178,11 @@
 
   &__nav-item {
     margin: 0 45px 0 0;
-    
+
     &:last-child {
       margin: 0;
     }
-    
+
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
 
@@ -281,7 +281,7 @@
       transition: all 0.3s;
     }
 
-    &:active .main-nav__tel-text{
+    &:active .main-nav__tel-text {
       color: var(--color-buttercup);
 
       transition: all 0.1s;

@@ -32,8 +32,10 @@
 
   &__graphic {
     position: relative;
+
     width: 13px;
     height: 13px;
+    user-select: none;
 
     margin: 0 17px 25px 0;
   }
@@ -59,13 +61,17 @@
   }
 
   &__item-title {
+    user-select: none;
+
     font-weight: 700;
     font-size: 25px;
     line-height: 37px;
     color: var(--color-black);
   }
-  
+
   &__item-desc {
+    user-select: none;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;

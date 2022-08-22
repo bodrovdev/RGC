@@ -1,12 +1,12 @@
 @use "../mixins";
 
-.engin {
+.engine {
   margin: 90px 0 90px 0;
 
   @include mixins.respond-to(mobileOnly) {
     margin: 60px 0 60px 0;
   }
-  
+
   &__title {
     margin-bottom: 35px;
   }
@@ -114,18 +114,16 @@
 
   &__tabs-itemset {
     display: none;
-    grid-template: 1fr / repeat(3, 1fr);
-    grid-column-gap: 22px;
+    align-items: center;
+    justify-content: space-between;
 
     @include mixins.respond-to(mobileOnly) {
-      grid-template: repeat(3, auto) / 1fr;
-      grid-column-gap: 0;
-      grid-row-gap: 10px;
+      flex-direction: column;
     }
   }
 
   &__tabs-itemset--active {
-    display: grid;
+    display: flex;
   }
 
   &__tabs-item {
@@ -138,7 +136,15 @@
     overflow: hidden;
     border-radius: 20px;
 
-    &:hover .engin__tabs-img, .engin__tabs-overlay {
+    padding: 10px 42px 42px;
+    margin: 0 23px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:hover .engine__tabs-img,
+    .engine__tabs-overlay {
       transform: scale(1.1);
 
       transition: all 0.5s;
@@ -147,6 +153,12 @@
     @include mixins.respond-to(mobileOnly) {
       width: 290px;
       height: auto;
+
+      margin: 0 0 10px 0;
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 
@@ -186,7 +198,7 @@
 
     max-width: 251px;
 
-    margin: auto 0 42px 42px;
+    margin: auto 0 0 0;
 
     z-index: 6;
   }

@@ -4,7 +4,7 @@
   position: relative;
 
   height: 860px;
-  
+
   @include mixins.respond-to(mobileOnly) {
     height: 100vh;
 
@@ -96,9 +96,22 @@
     transition: 0.3s;
 
     &:hover {
-      background: var(--color-buttercup);
-      
+      box-shadow: 0 0 0 5px var(--color-corn-harvest);
+
       transition: all 0.3s;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 5px var(--color-marigold-yellow);
+
+      transition: all 0.3s;
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--color-corn-harvest);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
     }
   }
 
