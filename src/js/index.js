@@ -40,7 +40,7 @@ engineTabsButtons.forEach((item) => {
   })
 })
 
-//Табы в блоке consult
+//Табы в блоке consulting
 
 let consultTabsButtons = document.querySelectorAll('.consult__tabs-button');
 let consultTabsItems = document.querySelectorAll('.consult__tabs-itemset');
@@ -62,5 +62,25 @@ consultTabsButtons.forEach((item) => {
     document.getElementById(id).classList.add('consult__tabs-itemset--active');
   })
 })
+
+//Сворачивание и разворачивание текста отзывов в блоке reviews
+
+let readMore = document.querySelectorAll('.reviews__item-controller');
+let reviewsBody = document.querySelectorAll('.reviews__item-body');
+
+readMore.forEach((elem) => {
+  elem.addEventListener('click', () => {
+    reviewsBody.forEach((value) => {
+      if (elem.parentElement === value.parentElement) {
+        value.classList.toggle('reviews__item-body--full');
+        value.classList.contains('reviews__item-body--full') ? 
+          elem.children.item(0).textContent = 'Свернуть отзыв' : 
+          elem.children.item(0).textContent = 'Читать весь отзыв';
+      }
+    })
+  })
+})
+
+
 
 

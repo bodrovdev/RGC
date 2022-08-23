@@ -7,6 +7,7 @@
 //Миксины
 @use 'mixins/font-face';
 @use 'mixins/screens';
+@use 'mixins/line-clamp';
 
 //Базовые стили
 @use 'base/base-container';
@@ -27,14 +28,15 @@
 @use 'blocks/page-header';
 @use 'blocks/page-content';
 @use 'blocks/page-footer';
+
 @use 'blocks/main-nav';
 @use 'blocks/heading';
 @use 'blocks/features';
 @use 'blocks/about';
 @use 'blocks/engine';
-
-@use 'blocks/footer-feedback';
-@use 'blocks/consult';@use 'blocks/callback';
+@use 'blocks/consulting';
+@use 'blocks/callback';
 @use 'blocks/documents';
 @use 'blocks/reviews';
 @use 'blocks/consultation';
+@use 'blocks/footer-feedback';

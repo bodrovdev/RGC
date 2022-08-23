@@ -1,6 +1,6 @@
 @use "../mixins";
 
-.consult {
+.consulting {
   margin: 90px 0 90px 0;
 
   @include mixins.respond-to(mobileOnly) {
@@ -149,8 +149,8 @@
       margin: 0;
     }
 
-    &:hover .consult__tabs-img,
-    .consult__tabs-overlay {
+    &:hover .consulting__tabs-img,
+    .consulting__tabs-overlay {
       transform: scale(1.1);
 
       transition: all 0.5s;

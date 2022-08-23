@@ -1,0 +1,11 @@
+/**
+ * Миксин для обрезания многострочного текста
+ * @example line-clamp(2)
+ * @param lines-count - кол-во строк
+ */
+ @mixin line-clamp($lines-count) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

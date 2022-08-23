@@ -20,3 +20,16 @@ const heading_slider = new Swiper('.heading__slider', {
     clickable: true,
   },
 }); 
+
+//Слайдер из блока reviews
+
+const reviews_slider = new Swiper('.reviews__slider', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 25,
+
+  navigation: {
+    nextEl: '.reviews__slider-button--next',
+    prevEl: '.reviews__slider-button--prev',
+  },
+}); 
