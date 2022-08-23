@@ -17,7 +17,7 @@
     box-shadow: 0px 0px 42px rgba(0, 0, 0, 0.07);
     border-radius: 20px;
 
-    padding: 36px 0 31px 72px;
+    padding: 35px 0 35px 70px;
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
@@ -28,7 +28,7 @@
   }
 
   &__column-inner {
-    max-width: 440px;
+    max-width: 460px;
 
     margin-right: auto;
 
@@ -44,7 +44,7 @@
 
   &__title {
     font-weight: 700;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 44px;
     color: var(--color-mine-shaft);
 

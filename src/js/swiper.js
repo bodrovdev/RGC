@@ -28,6 +28,16 @@ const reviews_slider = new Swiper('.reviews__slider', {
   slidesPerView: 3,
   spaceBetween: 25,
 
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    
+    1024: {
+      slidesPerView: 3,
+    }
+  },
+
   navigation: {
     nextEl: '.reviews__slider-button--next',
     prevEl: '.reviews__slider-button--prev',

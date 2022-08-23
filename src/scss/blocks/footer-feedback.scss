@@ -1,60 +1,161 @@
-// @use "../mixins";
+@use "../mixins";
 
-// .footer-feedback {
-//   background-image: url("../img/image/design/footer-feedback-background.jpg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
+.footer-feedback {
+  background-image: url("../img/image/design/footer-feedback-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-//   &__container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-//     padding: 72px 0 56px 0;
-//   }
+    padding: 72px 0 56px 0;
+  }
 
-//   &__info {
-//     display: flex;
-//     flex-direction: column;
+  &__info {
+    display: flex;
+    flex-direction: column;
 
-//     max-width: 360px;
-//   }
+    max-width: 360px;
 
-//   &__question {
-//     position: relative;
+    margin-right: 85px;
+  }
 
-//     font-weight: 700;
-//     font-size: 35px;
-//     line-height: 47px;
-//     color: var(--color-black);
+  &__question {
+    position: relative;
 
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       bottom: 0;
-//       right: 0;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 47px;
+    color: var(--color-black);
 
-//       width: 48px;
-//       height: 89px;
+    margin-bottom: 6px;
 
-//       background-image: url('../img/image/design/footer-feedback-question-graphic.svg');
-//       background-size: 48px 89px;
-//       background-position: center;
-//       background-repeat: no-repeat;
-//     }
-//   }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
 
-//   &__answer {
-//     font-weight: 400;
-//     font-size: 35px;
-//     line-height: 42px;
-//     color: var(--color-white);
-//   }
+      width: 48px;
+      height: 89px;
 
-//   &__text {
-//     font-weight: 700;
-//     font-size: 16.875px;
-//     line-height: 22px;
-//     color: var(--color-white);
-//   }
-// }
+      background-image: url('../img/image/design/footer-feedback-question-graphic.svg');
+      background-size: 48px 89px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__answer {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: var(--color-white);
+
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 16.875px;
+    line-height: 22px;
+    color: var(--color-white);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-fields {
+    display: flex;
+    align-items: stretch;
+
+    margin-bottom: 20px;
+  }
+
+  &__form-column {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__form-input {
+    width: 310px;
+    height: 55px;
+    background: var(--color-white);
+    border: 1px solid var(--color-mercury);
+    border-radius: 5px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-gray);
+
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__form-textarea {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 320px;
+    height: 100%;
+    resize: none;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-gray);
+    
+    padding: 20px 10px 10px 20px;
+  }
+
+  &__form-bottomline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  &__form-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-white);
+  }
+
+  &__form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 175px;
+    height: 50px;
+    background: var(--color-black);
+    border-radius: 61px;
+  }
+
+  &__submit-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-white);
+
+    margin-right: 10px;
+  }
+}
