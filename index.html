@@ -783,10 +783,54 @@
         </div>
       </div>
     </div>
+    <p class="reviews__disclaimer base-par">
+      Остальные наши клиенты кто не оставил отзывы, 
+      считают необходимым придерживаться политики 
+      конфиденциальности, и мы уважаем их выбор!
+    </p>
+    <button class="reviews__add-button base-button" type="button" id="modal-reviews-open">Оставить отзыв</button>
   </div>
 </section>
 	</main>
-	
+	<footer class="page-footer">
+  <section class="footer-feedback">
+    <div class="footer-feedback__container base-container">
+      <div class="footer-feedback__info">
+        <span class="footer-feedback__question">Остались вопросы</span>
+        <span class="footer-feedback__answer">Запишись на быструю консультацию	</span>
+        <span class="footer-feedback__text">
+          Для того чтобы мы могли связаться с вами, 
+          заполните свои контактные данные
+        </span>
+      </div>
+      <form class="footer-feedback__form" method="post" action="#">
+        <div class="footer-feedback__form-fields">
+          <div class="footer-feedback__form-column">
+            <input type="tel" class="footer-feedback__form-input" placeholder="Телефон">
+            <input type="email" class="footer-feedback__form-input" placeholder="E-mail">
+            <input type="text" class="footer-feedback__form-input" placeholder="Ваше имя">
+          </div>
+          <div class="footer-feedback__form-column">
+            <textarea class="footer-feedback__form-textarea" placeholder="Напишите свой&#10;вопрос"></textarea>
+          </div>
+        </div>
+        <div class="footer-feedback__form-bottomline">
+          <span class="footer-feedback__form-desc">
+            нажимая на кнопку отправить, вы подтверждаете свое согласие<br> на обработку пользовательских данных
+          </span>
+          <button class="footer-feedback__form-submit base-button" type="submit">
+            <span class="footer-feedback__submit-text">Отправить</span>
+            <svg class="footer-feedback__submit-icon" width="18" height="15" alt="">
+              <use href="img/icon/sprite.svg#white-arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="footer-main"></section>
+  <section class="footer-underline"></section>
+</footer>
 	<script src="js/index.min.js"></script>
 </body>
 
