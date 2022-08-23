@@ -42,8 +42,8 @@ engineTabsButtons.forEach((item) => {
 
 //Табы в блоке consulting
 
-let consultTabsButtons = document.querySelectorAll('.consult__tabs-button');
-let consultTabsItems = document.querySelectorAll('.consult__tabs-itemset');
+let consultTabsButtons = document.querySelectorAll('.consulting__tabs-button');
+let consultTabsItems = document.querySelectorAll('.consulting__tabs-itemset');
 
 consultTabsButtons.forEach((item) => {
   item.addEventListener('click', (e) => {
@@ -52,14 +52,14 @@ consultTabsButtons.forEach((item) => {
     const id = e.target.getAttribute('href').replace('#', '');
 
     consultTabsButtons.forEach(
-      (child) => child.classList.remove('consult__tabs-button--active')
+      (child) => child.classList.remove('consulting__tabs-button--active')
     );
     consultTabsItems.forEach(
-      (child) => child.classList.remove('consult__tabs-itemset--active')
+      (child) => child.classList.remove('consulting__tabs-itemset--active')
     );
 
-    item.classList.add('consult__tabs-button--active');
-    document.getElementById(id).classList.add('consult__tabs-itemset--active');
+    item.classList.add('consulting__tabs-button--active');
+    document.getElementById(id).classList.add('consulting__tabs-itemset--active');
   })
 })
 

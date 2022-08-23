@@ -80,6 +80,13 @@
 
       transition: all 0.3s;
     }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
+    }
   }
 
   &__learnmore-text {
@@ -100,6 +107,7 @@
     width: 656px;
     height: 329px;
     overflow: hidden;
+    user-select: none;
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
@@ -112,6 +120,13 @@
       transform: scale(1.1);
 
       transition: all 0.3s;
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
     }
   }
 

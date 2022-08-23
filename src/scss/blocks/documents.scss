@@ -33,6 +33,27 @@
     height: 50px;
     background: linear-gradient(160.58deg, #FFDC5E 15.73%, #F6BB1A 88.93%);
     border-radius: 70px;
+
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 0 5px var(--color-pomegranate);
+
+      transition: all 0.3s;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 5px var(--color-orange-roughy);
+
+      transition: all 0.3s;
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
+    }
   }
 
   &__more-text {
@@ -176,6 +197,27 @@
     height: 50px;
     background: linear-gradient(160.58deg, #FFDC5E 15.73%, #F6BB1A 88.93%);
     border-radius: 70px;
+    
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 0 5px var(--color-pomegranate);
+
+      transition: all 0.3s;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 5px var(--color-orange-roughy);
+
+      transition: all 0.3s;
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
+    }
   }
 
   &__buy-text {

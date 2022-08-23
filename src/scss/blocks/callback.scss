@@ -113,6 +113,8 @@
     height: 49px;
     border-radius: 41px;
 
+    transition: 0.3s;
+
     margin-right: 20px;
 
     @include mixins.respond-to(mobileOnly) {
@@ -125,27 +127,6 @@
 
     &:last-child {
       margin: 0;
-    }
-
-    &:hover {
-      box-shadow: 0 0 0 5px var(--color-corn-harvest);
-
-      transition: all 0.3s;
-    }
-
-    &:focus {
-      outline: none;
-      border: none;
-      box-shadow: none;
-    }
-
-    &:focus-visible {
-      outline: 3px solid var(--color-corn-harvest);
-      outline-offset: 5px;
-      border: none;
-      box-shadow: none;
-
-      transition: all 0.1s;
     }
   }
 
@@ -202,19 +183,19 @@
     margin-bottom: 19px;
 
     &:hover {
-      box-shadow: 0 0 0 5px var(--color-corn-harvest);
+      box-shadow: 0 0 0 5px var(--color-pomegranate);
 
       transition: all 0.3s;
     }
 
     &:active {
-      box-shadow: 0 0 0 5px var(--color-marigold-yellow);
+      box-shadow: 0 0 0 5px var(--color-orange-roughy);
 
       transition: all 0.3s;
     }
 
     &:focus-visible {
-      outline: 3px solid var(--color-corn-harvest);
+      outline: 5px solid var(--color-pomegranate);
       outline-offset: 5px;
 
       transition: all 0.1s;

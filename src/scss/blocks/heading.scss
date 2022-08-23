@@ -81,38 +81,7 @@
   }
 
   &__info-button {
-    width: 270px;
-    height: 50px;
-
-    background: linear-gradient(160.58deg, #FFDC5E 15.73%, #F6BB1A 88.93%);
-    border-radius: 70px;
-    cursor: pointer;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--color-mine-shaft);
-
-    transition: 0.3s;
-
-    &:hover {
-      box-shadow: 0 0 0 5px var(--color-corn-harvest);
-
-      transition: all 0.3s;
-    }
-
-    &:active {
-      box-shadow: 0 0 0 5px var(--color-marigold-yellow);
-
-      transition: all 0.3s;
-    }
-
-    &:focus-visible {
-      outline: 3px solid var(--color-pomegranate);
-      outline-offset: 5px;
-
-      transition: all 0.1s;
-    }
+    // moved
   }
 
   &__features {
