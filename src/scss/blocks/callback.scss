@@ -142,12 +142,21 @@
     line-height: 24px;
     color: var(--color-gray);
 
+    transition: 0.3s;
+
     padding: 13px 0 12px 66px;
 
     z-index: 5;
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-buttercup);
+      border: none;
+
+      transition: all 0.1s;
     }
   }
 

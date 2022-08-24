@@ -179,7 +179,7 @@
 
     &:focus-visible {
       outline: 3px solid var(--color-pomegranate);
-      outline-offset: 5px;
+      // outline-offset: 5px;
 
       transition: all 0.1s;
     }
@@ -205,7 +205,7 @@
 
     width: 193px;
     height: 60px;
-    background: #000000;
+    background-color: #000000;
     border-radius: 61px;
     cursor: pointer;
 
@@ -214,13 +214,13 @@
     margin-bottom: 24px;
 
     &:hover {
-      box-shadow: 0 0 0 3px var(--color-emperor);
+      background-color: var(--color-god-gray);
       
       transition: all 0.1s;
     }
 
     &:active {
-      box-shadow: 0 0 0 3px var(--color-mercury);
+      background-color: var(--color-mine-shaft);
 
       transition: all 0.1s;
     }
