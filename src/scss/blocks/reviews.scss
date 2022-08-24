@@ -12,6 +12,10 @@
     margin-top: 60px;
   }
 
+  @include mixins.respond-to(tabletOnly) {
+    margin-top: 60px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -29,6 +33,10 @@
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
     }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+    }
   }
 
   &__slider-navigation {
@@ -37,6 +45,17 @@
     display: flex;
 
     @include mixins.respond-to(mobileOnly) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      justify-content: space-between;
+
+      width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -81,6 +100,11 @@
       height: 30px;
     }
 
+    @include mixins.respond-to(tabletOnly) {
+      width: 30px;
+      height: 30px;
+    }
+
     &:last-of-type {
       margin: 0;
     }
@@ -94,6 +118,10 @@
     margin: 0 -10px 25px -10px;
 
     @include mixins.respond-to(mobileOnly) {
+      margin: 0 5% 25px 5%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       margin: 0 5% 25px 5%;
     }
   }
@@ -111,6 +139,12 @@
     padding: 28px 10px 29px 25px;
 
     @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+
+      padding: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       width: 100%;
 
       padding: 20px;
@@ -175,6 +209,10 @@
     @include mixins.respond-to(mobileOnly) {
       max-width: 100%;
     }
+
+    @include mixins.respond-to(tabletOnly) {
+      max-width: 100%;
+    }
   }
 
   &__item-controller {
@@ -223,6 +261,10 @@
     color: var(--color-buttercup);
 
     margin-right: 13px;
+  }
+
+  &__controller-icon {
+    fill: var(--color-buttercup);
   }
 
   &__disclaimer {
