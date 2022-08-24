@@ -95,6 +95,10 @@
     @include mixins.respond-to(mobileOnly) {
       display: none !important;
     }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: none !important;
+    }
   }
 }
 
@@ -112,6 +116,16 @@
   z-index: 4 !important;
 
   @include mixins.respond-to(mobileOnly) {
+    bottom: 10px !important;
+    top: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto;
+
+    flex-direction: row !important;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
     bottom: 10px !important;
     top: auto !important;
     left: 50% !important;

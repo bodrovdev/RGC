@@ -21,6 +21,14 @@
 
       padding: 50px 0 50px 0;
     }
+
+    @include mixins.respond-to(tabletOnly) {
+      grid-template: repeat(3, min-content) / 1fr;
+
+      width: 90%;
+
+      padding: 50px 0 50px 0;
+    }
   }
 
   &__column {
@@ -29,12 +37,20 @@
     @include mixins.respond-to(mobileOnly) {
       margin: 0 0 30px 0;
     }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__logo-block {
     margin-bottom: 45px;
 
     @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       margin-bottom: 20px;
     }
   }
@@ -50,6 +66,10 @@
     margin-right: 70px;
 
     @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 30px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       margin: 0 0 30px 0;
     }
   }
@@ -71,6 +91,12 @@
     margin-right: 80px;
 
     @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+
+      margin: 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       width: 100%;
 
       margin: 0;
@@ -105,6 +131,10 @@
     width: 210px;
 
     @include mixins.respond-to(mobileOnly) {
+      width: 100%; 
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       width: 100%; 
     }
   }
@@ -186,6 +216,11 @@
     width: 370px;
 
     @include mixins.respond-to(mobileOnly) {
+      width: 100%; 
+      max-width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       width: 100%; 
       max-width: 100%;
     }

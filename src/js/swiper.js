@@ -10,7 +10,7 @@ const heading_slider = new Swiper('.heading__slider', {
       direction: 'horizontal',
     },
     
-    768: {
+    1024: {
       direction: 'vertical',
     }
   },
