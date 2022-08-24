@@ -92,6 +92,10 @@
 
   &__slider {
     margin: 0 -10px 25px -10px;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 5% 25px 5%;
+    }
   }
 
   &__slider-item {
@@ -236,8 +240,7 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 11px;
 
       width: 2px;
       height: 2px;

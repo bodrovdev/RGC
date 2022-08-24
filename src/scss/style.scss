@@ -32,6 +32,7 @@
 @use 'blocks/main-nav';
 @use 'blocks/heading';
 @use 'blocks/features';
+
 @use 'blocks/about';
 @use 'blocks/engine';
 @use 'blocks/consulting';
@@ -39,6 +40,8 @@
 @use 'blocks/documents';
 @use 'blocks/reviews';
 @use 'blocks/consultation';
-@use 'blocks/footer-feedback';
+
 @use 'blocks/footer-main';
+@use 'blocks/footer-feedback';
 @use 'blocks/consult-button';
+@use 'blocks/footer-underline';
