@@ -28,7 +28,13 @@
       padding: 20px 0 20px 0;
     }
 
-    @include mixins.respond-to(desktopM) {
+    @include mixins.respond-to(desktopD) {
+      justify-content: center;
+    }
+  }
+
+  @media(min-width: 1900px) {
+    &__container {
       align-items: initial;
       justify-content: flex-start;
 
@@ -265,7 +271,6 @@
   }
 
   &__form-input {
-
     height: 55px;
     background: var(--color-white);
     border: 1px solid var(--color-mercury);
@@ -321,7 +326,7 @@
       line-height: 30px;
     }
 
-    @include mixins.respond-to(desktopM) {
+    @include mixins.respond-to(desktopD) {
       width: 310px;
     }
   }

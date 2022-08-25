@@ -36,6 +36,14 @@
     }
 
     @include mixins.respond-to(desktopS) {
+      justify-content: space-between;
+
+      width: 90%;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    &__container {
       justify-content: flex-start;
 
       width: 71.5%;
@@ -78,7 +86,11 @@
     @include mixins.respond-to(desktopS) {
       font-size: 12px;
       line-height: 18px;
+    }
+  }
 
+  @media (min-width: 1700px) {
+    &__policy-link {
       margin-right: 345px;
     }
   }
@@ -106,10 +118,14 @@
     @include mixins.respond-to(desktopS) {
       font-size: 12px;
       line-height: 18px;
-
-      margin-right: 430px;
     }
   }
+
+  @media (min-width: 1700px) {
+    &__copyright {
+      margin-right: 430px;
+    }    
+  } 
 
   &__credits-link {
     display: flex;

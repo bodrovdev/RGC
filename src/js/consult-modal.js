@@ -1,18 +1,18 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-let modal = document.getElementById('modal-consult');
-let modalOpen = document.querySelectorAll('.consult-button');
-let modalClose = document.getElementById('modal-consult-close');
+let modal = document.getElementById('consult-modal');
+let modalOpen = document.querySelectorAll('.consult-modal-button');
+let modalClose = document.getElementById('consult-modal-close');
 
 modalOpen.forEach((element) => {
   element.addEventListener('click', () => {
-    modal.classList.add('consultation--opened');
+    modal.classList.add('consult-modal--opened');
     disableBodyScroll(modal);
   })
 })
 
 modalClose.addEventListener('click', () => {
-  modal.classList.remove('consultation--opened');
+  modal.classList.remove('consult-modal--opened');
   enableBodyScroll(modal);
 })
 
@@ -21,7 +21,7 @@ modal.addEventListener('click', (e) => {
     return;
   }
   else {
-    modal.classList.remove('consultation--opened');
+    modal.classList.remove('consult-modal--opened');
     enableBodyScroll(modal);
   }
 })

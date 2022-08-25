@@ -24,6 +24,7 @@
 
 //БЭМ блоки
 @use 'blocks/section-title';
+@use 'blocks/consult-modal-button';
 
 @use 'blocks/page-header';
 @use 'blocks/page-content';
@@ -39,9 +40,9 @@
 @use 'blocks/callback';
 @use 'blocks/documents';
 @use 'blocks/reviews';
-@use 'blocks/consultation';
+@use 'blocks/consult-modal';
+@use 'blocks/reviews-modal';
 
 @use 'blocks/footer-main';
 @use 'blocks/footer-feedback';
-@use 'blocks/consult-button';
 @use 'blocks/footer-underline';
