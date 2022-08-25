@@ -7,9 +7,6 @@
 
   &__container {
     display: flex;
-    justify-content: flex-start;
-
-    padding: 48px 0 50px 0;
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
@@ -23,6 +20,19 @@
       align-items: center;
 
       padding: 60px 0 50px 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      align-items: center;
+
+      padding: 20px 0 20px 0;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      align-items: initial;
+      justify-content: flex-start;
+
+      padding: 48px 0 50px 0;
     }
   }
 
@@ -33,9 +43,6 @@
     box-sizing: content-box;
     max-width: 360px;
 
-    padding: 30px 0 0 60px;
-    margin-right: 85px;
-
     @include mixins.respond-to(mobileOnly) {
       align-items: center;
 
@@ -53,31 +60,28 @@
       padding: 0;
       margin: 0;
     }
+
+    @include mixins.respond-to(desktopS) {
+      padding: 0;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      padding: 30px 0 0 60px;
+      margin-right: 85px;
+    }
   }
 
   &__question {
     position: relative;
 
     font-weight: 700;
-    font-size: 35px;
-    line-height: 47px;
     color: var(--color-black);
-
-    margin-bottom: 6px;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
       right: 0;
-
-      width: 48px;
-      height: 89px;
-
-      background-image: url('../img/image/design/footer-feedback-question-graphic.svg');
-      background-size: 48px 89px;
-      background-position: center;
-      background-repeat: no-repeat;
     }
 
     @include mixins.respond-to(mobileOnly) {
@@ -86,7 +90,7 @@
       width: fit-content;
 
       font-size: 25px;
-      line-height: 1;
+      line-height: 1.25;
 
       padding-right: 30px;
       margin-bottom: 10px;
@@ -108,7 +112,7 @@
       width: fit-content;
 
       font-size: 25px;
-      line-height: 1;
+      line-height: 1.25;
 
       padding-right: 30px;
       margin-bottom: 10px;
@@ -119,6 +123,46 @@
 
         background-image: url('../img/image/design/footer-feedback-question-graphic.svg');
         background-size: 20px 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @include mixins.respond-to(desktopS) {
+      display: inline-block;
+
+      width: fit-content;
+
+      font-size: 25px;
+      line-height: 1.25;
+
+      padding-right: 30px;
+      margin-bottom: 10px;
+
+      &::after {
+        width: 20px;
+        height: 40px;
+
+        background-image: url('../img/image/design/footer-feedback-question-graphic.svg');
+        background-size: 20px 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @include mixins.respond-to(desktopM) {
+      font-size: 35px;
+      line-height: 47px;
+  
+      padding-right: 40px;
+      margin-bottom: 6px;
+  
+      &::after {
+        width: 48px;
+        height: 89px;
+  
+        background-image: url('../img/image/design/footer-feedback-question-graphic.svg');
+        background-size: 48px 89px;
         background-position: center;
         background-repeat: no-repeat;
       }
@@ -127,11 +171,7 @@
 
   &__answer {
     font-weight: 400;
-    font-size: 35px;
-    line-height: 42px;
     color: var(--color-white);
-
-    margin-bottom: 20px;
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 25px;
@@ -145,6 +185,20 @@
       line-height: 1.25;
 
       margin-bottom: 10px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      font-size: 25px;
+      line-height: 1.25;
+
+      margin-bottom: 10px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      font-size: 35px;
+      line-height: 42px;
+  
+      margin-bottom: 20px;
     }
   }
 
@@ -158,6 +212,8 @@
   &__form {
     display: flex;
     flex-direction: column;
+
+    max-width: 642px;
 
     padding-top: 25px;
   }
@@ -209,7 +265,7 @@
   }
 
   &__form-input {
-    width: 310px;
+
     height: 55px;
     background: var(--color-white);
     border: 1px solid var(--color-mercury);
@@ -217,11 +273,7 @@
 
     font-family: var(--font-family-default) !important;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
     color: var(--color-gray);
-
-    transition: 0.3s;
 
     padding-left: 20px;
     margin-bottom: 10px;
@@ -230,11 +282,12 @@
       margin: 0;
     }
 
-    &:focus {
-      border: none;
-      outline: 5px solid var(--color-pomegranate);
+    &:hover {
+      outline: 2px solid var(--color-mine-shaft);
+    }
 
-      transition: all 0.3s;
+    &:focus {
+      outline: 2px solid var(--color-mine-shaft);
     }
 
     @include mixins.respond-to(mobileOnly) {
@@ -243,6 +296,10 @@
       font-size: 16px;
 
       margin-bottom: 20px;
+
+      &:last-of-type {
+        margin: 0;
+      }
     }
 
     @include mixins.respond-to(tabletOnly) {
@@ -251,6 +308,21 @@
       font-size: 16px;
 
       margin-bottom: 20px;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    @include mixins.respond-to(desktopS) {
+      width: 210px;
+      
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      width: 310px;
     }
   }
 
@@ -270,16 +342,15 @@
     font-size: 20px;
     line-height: 30px;
     color: var(--color-gray);
-
-    transition: 0.3s;
     
     padding: 20px 10px 10px 20px;
 
-    &:focus {
-      border: none;
-      outline: 5px solid var(--color-pomegranate);
+    &:hover {
+      outline: 2px solid var(--color-mine-shaft);
+    }
 
-      transition: all 0.3s;
+    &:focus {
+      outline: 2px solid var(--color-mine-shaft);
     }
 
     @include mixins.respond-to(mobileOnly) {
@@ -334,6 +405,10 @@
 
       text-align: center;
     }
+
+    @include mixins.respond-to(desktopS) {
+      margin-right: 50px;
+    }
   }
 
   &__form-submit {
@@ -351,14 +426,16 @@
 
     transition: 0.3s;
 
+    padding: 15px 25px 15px 40px;
+
     &:hover {
-      background-color: var(--color-god-gray);
+      background-color: var(--color-mine-shaft);
 
       transition: all 0.3s;
     }
 
     &:active {
-      background-color: var(--color-mine-shaft);
+      background-color: var(--color-tundora);
 
       transition: all 0.3s;
     }

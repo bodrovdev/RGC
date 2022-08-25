@@ -112,12 +112,22 @@
   }
 
   &__logo-block {
-    margin-right: 50px;
-
     z-index: 5;
 
     @include mixins.respond-to(mobileOnly) {
       margin-right: 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-right: 20px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      margin-right: 30px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      margin-right: 50px;
     }
   }
 
@@ -205,14 +215,13 @@
 
       margin: 0 0 40px 0;
     }
+
+    @include mixins.respond-to(desktopS) {
+      align-items: center;
+    }
   }
 
   &__nav-item {
-    margin: 0 45px 0 0;
-
-    &:last-child {
-      margin: 0;
-    }
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
@@ -233,6 +242,30 @@
         margin: 0;
       }
     }
+
+    @include mixins.respond-to(desktopS) {
+      margin: 0 20px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @include mixins.respond-to(desktopD) {
+      margin: 0 30px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @include mixins.respond-to(desktopM) {
+      margin: 0 45px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
 
   &__nav-link {
@@ -242,8 +275,6 @@
     overflow: hidden;
 
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
     color: var(--color-white);
 
     padding-bottom: 5px;
@@ -270,6 +301,20 @@
       color: var(--color-mine-shaft);
 
       padding-bottom: 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      font-size: 14px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      font-size: 16px;
+      line-height: 24px;
     }
 
     &::before {
@@ -405,6 +450,8 @@
     border: 1px solid var(--color-white);
     cursor: pointer;
 
+    transition: 0.3s;
+
     z-index: 5;
 
     @include mixins.respond-to(mobileOnly) {
@@ -481,5 +528,33 @@
 
     transition-delay: 0.3s;
     transition: all 0.1s;
+  }
+
+  &__burger:hover {
+    border: 1px solid var(--color-buttercup);
+
+    transition: all 0.3s;
+  }
+
+  &__burger:hover .main-nav__burger-line {
+    background-color: var(--color-buttercup);
+
+    transition: all 0.3s;
+  }
+
+  &__burger:hover .main-nav__burger-line::before {
+    background-color: var(--color-buttercup);
+
+    transition: all 0.3s;
+  }
+
+  &__burger:hover .main-nav__burger-line::after {
+    background-color: var(--color-buttercup);
+
+    transition: all 0.3s;
+  }
+
+  &__burger--active:hover .main-nav__burger-line {
+    background-color: transparent;
   }
 }

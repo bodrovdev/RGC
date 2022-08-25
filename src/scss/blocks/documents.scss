@@ -149,8 +149,6 @@
 
   &__item-underline {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
     width: 100%;
 
@@ -164,6 +162,17 @@
     @include mixins.respond-to(tabletOnly) {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -198,6 +207,14 @@
 
     @include mixins.respond-to(tabletOnly) {
       margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      margin: 0;
     }
   }
 

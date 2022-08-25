@@ -6,9 +6,7 @@
 
   &__container {
     display: grid;
-    grid-template: 1fr / repeat(2, 1fr);
-    grid-column-gap: 75px;
-    align-items: center;
+    
 
     @include mixins.respond-to(mobileOnly) {
       grid-template: repeat(2, auto) / auto;
@@ -24,6 +22,17 @@
       grid-row-gap: 30px;
       align-items: start;
       justify-items: center;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      grid-template: 1fr /repeat(2, auto);
+      grid-column-gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      grid-column-gap: 75px;
     }
   }
 
@@ -122,25 +131,34 @@
     position: relative;
 
     display: block;
-    order: 2;
 
-    width: 656px;
-    height: 329px;
     overflow: hidden;
     user-select: none;
 
     @include mixins.respond-to(mobileOnly) {
+      order: 1;
+
       width: 100%;
       height: auto;
-
-      order: 1;
     }
 
     @include mixins.respond-to(tabletOnly) {
+      order: 1;
+
       width: 100%;
       height: auto;
+    }
 
-      order: 1;
+    @include mixins.respond-to(desktopS) {
+      order: 2;
+
+      width: 400px;
+      height: auto;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      width: 656px;
+      height: 329px;
     }
 
     &:hover .about__graphic {
