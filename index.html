@@ -22,29 +22,63 @@
 </head>
 
 <body>
-	<section class="consultation" id="modal-consult">
-  <div class="consultation__wrapper">
-    <button class="consultation__close-button base-button" id="modal-consult-close">
-      <div class="consultation__close-inner"></div>
+	<section class="consult-modal" id="consult-modal">
+  <div class="consult-modal__wrapper">
+    <button class="consult-modal__close-button base-button" id="consult-modal-close">
+      <div class="consult-modal__close-inner"></div>
     </button>
-    <div class="consultation__inner">
-      <h2 class="consultation__title base-title">Заказать консультацию</h2>
-      <form class="consultation__form" method="post" action="#" >
-        <input class="consultation__input" type="text" placeholder="Ваше имя">
-        <input class="consultation__input" type="tel" placeholder="Телефон">
-        <input class="consultation__input" type="email" placeholder="Email">
-        <button class="consultation__submit base-button">
-          <span class="consultation__submit-text">Отправить</span>
-          <svg class="consultation__icon" width="20" height="15" alt="">
+    <div class="consult-modal__inner">
+      <h2 class="consult-modal__title base-title">Заказать консультацию</h2>
+      <form class="consult-modal__form" method="post" action="#" >
+        <input class="consult-modal__input" type="text" placeholder="Ваше имя">
+        <input class="consult-modal__input" type="tel" placeholder="Телефон">
+        <input class="consult-modal__input" type="email" placeholder="Email">
+        <button class="consult-modal__submit base-button">
+          <span class="consult-modal__submit-text">Отправить</span>
+          <svg class="consult-modal__icon" width="20" height="15" alt="">
             <use href="img/icon/sprite.svg#white-arrow-icon"></use>
           </svg>
         </button>
       </form>
-      <p class="consultation__datacheck base-par">
+      <p class="consult-modal__datacheck base-par">
         Нажимая на кнопку отправить, вы подтверждаете 
         свое согласие на обработку 
         пользовательских данных
       </p>
+    </div>
+  </div>
+</section>
+	<section class="reviews-modal" id="reviews-modal">
+  <div class="reviews-modal__wrapper">
+    <button class="reviews-modal__close-button base-button" id="reviews-modal-close">
+      <div class="reviews-modal__close-inner"></div>
+    </button>
+    <div class="reviews-modal__inner">
+      <h2 class="reviews-modal__title base-title">Оставить отзыв</h2>
+      <form class="reviews-modal__form" action="#" method="post">
+        <div class="reviews-modal__form-inner">
+          <div class="reviews-modal__form-column">
+            <input class="reviews-modal__form-input" type="text" placeholder="ФИО">
+            <input class="reviews-modal__form-input" type="email" placeholder="Email">
+            <input class="reviews-modal__form-input" type="text" placeholder="Организация">
+            <input class="reviews-modal__file-input visually-hidden" type="file">
+            <button class="reviews-modal__file-loader base-button">Добавить фото</button>
+          </div>
+          <textarea class="reviews-modal__form-column" placeholder="Напишите отзыв"></textarea>
+        </div>
+        <div class="reviews-modal__form-underline">
+          <span class="reviews-modal__form-desc">
+            Нажимая на кнопку отправить, вы подтверждаете 
+            свое согласие на обработку пользовательских данных
+          </span>
+          <button class="reviews-modal__form-submit base-button" type="submit">
+            <span class="reviews-modal__submit-text">Отправить</span>
+            <svg class="reviews-modal__submit-icon" width="18" height="15" alt="">
+              <use href="img/icon/sprite.svg#white-arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -87,7 +121,7 @@
 						<div class="heading__info-block">
 							<span class="heading__info-title base-title">получи бесплатно <br> проект готового документа</span>
 							<span class="heading__info-subtitle">при заказе консультации</span>
-							<button class="heading__info-button consult-button base-button" type="button">Заказать консультацию</button>
+							<button class="heading__info-button consult-modal-button base-button" type="button">Заказать консультацию</button>
 						</div>
 						<style>
 							.heading__slider-item {
@@ -101,7 +135,7 @@
 						<div class="heading__info-block">
 							<span class="heading__info-title base-title">получи бесплатно <br> проект готового документа</span>
 							<span class="heading__info-subtitle">при заказе консультации</span>
-							<button class="heading__info-button consult-button base-button" type="button">Заказать консультацию</button>
+							<button class="heading__info-button consult-modal-button base-button" type="button">Заказать консультацию</button>
 						</div>
 						<style>
 							.heading__slider-item {
@@ -115,7 +149,7 @@
 						<div class="heading__info-block">
 							<span class="heading__info-title base-title">получи бесплатно <br> проект готового документа</span>
 							<span class="heading__info-subtitle">при заказе консультации</span>
-							<button class="heading__info-button consult-button base-button" type="button">Заказать консультацию</button>
+							<button class="heading__info-button consult-modal-button base-button" type="button">Заказать консультацию</button>
 						</div>
 						<style>
 							.heading__slider-item {
@@ -787,7 +821,7 @@
       считают необходимым придерживаться политики 
       конфиденциальности, и мы уважаем их выбор!
     </p>
-    <button class="reviews__add-button base-button" type="button" id="modal-reviews-open">Оставить отзыв</button>
+    <button class="reviews__add-button reviews-modal-button base-button" type="button">Оставить отзыв</button>
   </div>
 </section>
 	</main>
@@ -833,7 +867,7 @@
         <figure class="footer-main__logo-block base-figure">
           <img class="footer-main__logo-img" src="../img/image/design/logo.svg" width="170" height="70" alt="Логотип">
         </figure>
-        <button class="footer-main__info-button consult-button base-button" type="button">Заказать консультацию</button>
+        <button class="footer-main__info-button consult-modal-button base-button" type="button">Заказать консультацию</button>
       </div>
       <div class="footer-main__bread-block">
         <div class="footer-main__engine-bread">
