@@ -22,6 +22,20 @@
 </head>
 
 <body>
+	<section class="success-modal" id="success-modal">
+  <div class="success-modal__wrapper">
+    <button class="success-modal__close-button base-button" id="success-modal-close">
+      <div class="success-modal__close-inner"></div>
+    </button>
+    <div class="success-modal__success">
+      <h2 class="success-modal__success-title base-title">Спасибо за обращение!</h2>
+      <p class="consult__success-text base-par">
+        Ваша заявка принята.
+      </p>
+    </div>
+  </div>
+</section>
+
 	<section class="consult-modal" id="consult-modal">
   <div class="consult-modal__wrapper">
     <button class="consult-modal__close-button base-button" id="consult-modal-close">
@@ -30,8 +44,8 @@
     <div class="consult-modal__inner" id="consult-modal-main">
       <h2 class="consult-modal__title base-title">Заказать консультацию</h2>
       <form class="consult-modal__form" method="post" id="consult-modal-form">
-        <input class="consult-modal__input" type="text" placeholder="Ваше имя">
-        <input class="consult-modal__input" type="tel" placeholder="Телефон">
+        <input class="consult-modal__input" type="text" placeholder="Ваше имя" required>
+        <input class="consult-modal__input" type="tel" placeholder="Телефон" required>
         <input class="consult-modal__input" type="email" placeholder="Email">
         <button class="consult-modal__submit base-button">
           <span class="consult-modal__submit-text">Отправить</span>
@@ -54,6 +68,7 @@
     </div>
   </div>
 </section>
+	
 	<section class="reviews-modal" id="reviews-modal">
   <div class="reviews-modal__wrapper">
     <button class="reviews-modal__close-button base-button" id="reviews-modal-close">
@@ -64,13 +79,13 @@
       <form class="reviews-modal__form" id="reviews-modal-form"r>
         <div class="reviews-modal__form-inner">
           <div class="reviews-modal__form-column">
-            <input class="reviews-modal__form-input" type="text" placeholder="ФИО">
-            <input class="reviews-modal__form-input" type="email" placeholder="Email">
-            <input class="reviews-modal__form-input" type="text" placeholder="Организация">
-            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1">
+            <input class="reviews-modal__form-input" type="text" placeholder="ФИО" required>
+            <input class="reviews-modal__form-input" type="email" placeholder="Email" required>
+            <input class="reviews-modal__form-input" type="text" placeholder="Организация" required>
+            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1" required>
             <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить фото</button>
           </div>
-          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв"></textarea>
+          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв" required></textarea>
         </div>
         <div class="reviews-modal__form-underline">
           <span class="reviews-modal__form-desc">
@@ -95,6 +110,7 @@
     </div>
   </div>
 </section>
+
 	<header class="page-header">
 		<nav class="main-nav">
 			<div class="main-nav__container base-container">
@@ -402,14 +418,14 @@
           договорятся о времени проведения 
           консультации
         </p>
-        <form class="callback__form" method="post">
+        <form class="callback__form" method="post" id="success-modal-form">
           <div class="callback__inputs">
             <div class="callback__input">
-              <input class="callback__input-field" type="text" placeholder="Ваше имя">
+              <input class="callback__input-field" type="text" placeholder="Ваше имя" required>
               <img class="callback__input-icon" src="../img/image/design/input-name.svg" width="40" height="40" alt="">
             </div>
             <div class="callback__input">
-              <input class="callback__input-field" type="tel" placeholder="Телефон">
+              <input class="callback__input-field" type="tel" placeholder="Телефон" required>
               <img class="callback__input-icon" src="../img/image/design/input-phone.svg" width="40" height="40" alt="">
             </div>
           </div>
@@ -837,7 +853,9 @@
     <button class="reviews__add-button reviews-modal-button base-button" type="button">Оставить отзыв</button>
   </div>
 </section>
+
 	</main>
+
 	<footer class="page-footer">
   <section class="footer-feedback">
     <div class="footer-feedback__container base-container">
@@ -849,12 +867,12 @@
           заполните свои контактные данные
         </span>
       </div>
-      <form class="footer-feedback__form" method="post" action="#">
+      <form class="footer-feedback__form" method="post" id="success-modal-form">
         <div class="footer-feedback__form-fields">
           <div class="footer-feedback__form-column">
-            <input type="tel" class="footer-feedback__form-input" placeholder="Телефон">
+            <input type="tel" class="footer-feedback__form-input" placeholder="Телефон" required>
             <input type="email" class="footer-feedback__form-input" placeholder="E-mail">
-            <input type="text" class="footer-feedback__form-input" placeholder="Ваше имя">
+            <input type="text" class="footer-feedback__form-input" placeholder="Ваше имя" required>
           </div>
           <div class="footer-feedback__form-column">
             <textarea class="footer-feedback__form-textarea" placeholder="Напишите свой&#10;вопрос"></textarea>
@@ -946,6 +964,7 @@
     </div>
   </section>
 </footer>
+
 	<script src="js/index.min.js"></script>
 </body>
 
