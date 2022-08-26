@@ -29,7 +29,7 @@
     </button>
     <div class="consult-modal__inner">
       <h2 class="consult-modal__title base-title">Заказать консультацию</h2>
-      <form class="consult-modal__form" method="post" action="#" >
+      <form class="consult-modal__form" method="post">
         <input class="consult-modal__input" type="text" placeholder="Ваше имя">
         <input class="consult-modal__input" type="tel" placeholder="Телефон">
         <input class="consult-modal__input" type="email" placeholder="Email">
@@ -55,16 +55,16 @@
     </button>
     <div class="reviews-modal__inner">
       <h2 class="reviews-modal__title base-title">Оставить отзыв</h2>
-      <form class="reviews-modal__form" action="#" method="post">
+      <form class="reviews-modal__form">
         <div class="reviews-modal__form-inner">
           <div class="reviews-modal__form-column">
             <input class="reviews-modal__form-input" type="text" placeholder="ФИО">
             <input class="reviews-modal__form-input" type="email" placeholder="Email">
             <input class="reviews-modal__form-input" type="text" placeholder="Организация">
-            <input class="reviews-modal__file-input visually-hidden" type="file">
-            <button class="reviews-modal__file-loader base-button">Добавить фото</button>
+            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1">
+            <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить фото</button>
           </div>
-          <textarea class="reviews-modal__form-column" placeholder="Напишите отзыв"></textarea>
+          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв"></textarea>
         </div>
         <div class="reviews-modal__form-underline">
           <span class="reviews-modal__form-desc">
@@ -389,7 +389,7 @@
           договорятся о времени проведения 
           консультации
         </p>
-        <form class="callback__form" action="#" method="post">
+        <form class="callback__form" method="post">
           <div class="callback__inputs">
             <div class="callback__input">
               <input class="callback__input-field" type="text" placeholder="Ваше имя">
