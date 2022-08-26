@@ -8,13 +8,13 @@
       <form class="reviews-modal__form" id="reviews-modal-form"r>
         <div class="reviews-modal__form-inner">
           <div class="reviews-modal__form-column">
-            <input class="reviews-modal__form-input" type="text" placeholder="ФИО">
-            <input class="reviews-modal__form-input" type="email" placeholder="Email">
-            <input class="reviews-modal__form-input" type="text" placeholder="Организация">
-            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1">
+            <input class="reviews-modal__form-input" type="text" placeholder="ФИО" required>
+            <input class="reviews-modal__form-input" type="email" placeholder="Email" required>
+            <input class="reviews-modal__form-input" type="text" placeholder="Организация" required>
+            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1" required>
             <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить фото</button>
           </div>
-          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв"></textarea>
+          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв" required></textarea>
         </div>
         <div class="reviews-modal__form-underline">
           <span class="reviews-modal__form-desc">
