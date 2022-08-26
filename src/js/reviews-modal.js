@@ -25,3 +25,22 @@ modal.addEventListener('click', (e) => {
     enableBodyScroll(modal);
   }
 })
+
+let modalFileInput = document.getElementById('reviews-modal-file-input');
+let modalFileButton = document.getElementById('reviews-modal-file-button');
+
+modalFileButton.addEventListener('click', () => {
+  modalFileInput.click();
+})
+
+modalFileInput.addEventListener('change', (e) => {
+  const [file] = e.target.files;
+  console.log(file.name);
+
+  if(file.name.length < 20) {
+    modalFileButton.textContent = file.name;
+  }
+  else {
+    modalFileButton.textContent = `${file.name.slice(0, 3)}...${file.name.slice(-7, file.name.length)}`;
+  }
+})
