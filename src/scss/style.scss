@@ -28,6 +28,7 @@
 @use 'blocks/success-modal';
 
 @use 'blocks/page-header';
+@use 'blocks/main-heading';
 @use 'blocks/page-content';
 @use 'blocks/page-footer';
 
@@ -46,4 +47,4 @@
 
 @use 'blocks/footer-main';
 @use 'blocks/footer-feedback';
-@use 'blocks/footer-underline';
+@use 'blocks/footer-underline';@use 'blocks/subject';

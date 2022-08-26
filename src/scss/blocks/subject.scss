@@ -1,0 +1,13 @@
+@use "../mixins";
+
+.subject {
+  margin-top: 110px;
+
+  &__container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 100px 50px;
+    align-items: center;
+    justify-items: center;
+  }
+}

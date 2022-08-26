@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/base-blocks/_base-head.html', {
+"title": "RGC"
+})
+<body>
+  @@include('components/bam-blocks/_success-modal.html')
+
+	@@include('components/bam-blocks/_consult-modal.html')
+	
+	@@include('components/bam-blocks/_reviews-modal.html')
+
+  @@include('components/base-blocks/_base-header.html', {
+    "current-page": "О нас"
+})
+  <style>
+    .main-heading {
+      background: url('img/image/design/about-heading-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style> 
+
+  <main class="page-content">
+    <section class="subject">
+      <div class="subject__container base-container">
+        <div class="subject__description-block">111</div>
+        <div class="subject__media-block">222</div>
+        <div class="subject__description-block">111</div>
+        <div class="subject__media-block">222</div>
+        <div class="subject__description-block">111</div>
+        <div class="subject__media-block">222</div>
+      </div>
+    </section>
+
+    @@include('components/bam-blocks/_callback.html')
+
+    <section class="сertis"></section>
+  
+    @@include('components/bam-blocks/_reviews.html')
+  </main>
+
+  @@include('components/base-blocks/_base-footer.html')
+
+  <script src="js/index.min.js"></script>
+</body>
+</html>
