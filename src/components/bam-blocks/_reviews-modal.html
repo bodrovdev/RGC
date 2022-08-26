@@ -3,9 +3,9 @@
     <button class="reviews-modal__close-button base-button" id="reviews-modal-close">
       <div class="reviews-modal__close-inner"></div>
     </button>
-    <div class="reviews-modal__inner">
+    <div class="reviews-modal__inner" id="reviews-modal-main">
       <h2 class="reviews-modal__title base-title">Оставить отзыв</h2>
-      <form class="reviews-modal__form">
+      <form class="reviews-modal__form" id="reviews-modal-form"r>
         <div class="reviews-modal__form-inner">
           <div class="reviews-modal__form-column">
             <input class="reviews-modal__form-input" type="text" placeholder="ФИО">
@@ -29,6 +29,13 @@
           </button>
         </div>
       </form>
+    </div>
+    <div class="reviews-modal__success" id="reviews-modal-success">
+      <h2 class="reviews-modal__success-title base-title">Спасибо, ваш отзыв отправлен!</h2>
+      <p class="reviews__success-text base-par">
+        После проверки модератором,<br>
+        отзыв появится в общей ленте.
+      </p>
     </div>
   </div>
 </section>

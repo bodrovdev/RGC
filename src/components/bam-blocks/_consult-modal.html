@@ -3,9 +3,9 @@
     <button class="consult-modal__close-button base-button" id="consult-modal-close">
       <div class="consult-modal__close-inner"></div>
     </button>
-    <div class="consult-modal__inner">
+    <div class="consult-modal__inner" id="consult-modal-main">
       <h2 class="consult-modal__title base-title">Заказать консультацию</h2>
-      <form class="consult-modal__form" method="post">
+      <form class="consult-modal__form" method="post" id="consult-modal-form">
         <input class="consult-modal__input" type="text" placeholder="Ваше имя">
         <input class="consult-modal__input" type="tel" placeholder="Телефон">
         <input class="consult-modal__input" type="email" placeholder="Email">
@@ -20,6 +20,12 @@
         Нажимая на кнопку отправить, вы подтверждаете 
         свое согласие на обработку 
         пользовательских данных
+      </p>
+    </div>
+    <div class="consult-modal__success" id="consult-modal-success">
+      <h2 class="consult-modal__success-title base-title">Спасибо за обращение!</h2>
+      <p class="consult__success-text base-par">
+        Ваша заявка принята.
       </p>
     </div>
   </div>

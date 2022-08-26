@@ -1,5 +1,7 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
+//Открытие модального окна "добавить отзыв"
+
 let modal = document.getElementById('reviews-modal');
 let modalOpen = document.querySelectorAll('.reviews-modal-button');
 let modalClose = document.getElementById('reviews-modal-close');
@@ -26,6 +28,20 @@ modal.addEventListener('click', (e) => {
   }
 })
 
+//Вывод сообщения об успешной отправки формы
+
+let modalMain = document.getElementById('reviews-modal-main');
+let modalForm = document.getElementById('reviews-modal-form');
+let modalSuccess = document.getElementById('reviews-modal-success');
+
+modalForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  modalMain.classList.add('reviews-modal__inner--hidden');
+  modalSuccess.classList.add('reviews-modal__success--shown');
+})
+
+//Обработка добавления файлов к форме, просмотр имени файла
+
 let modalFileInput = document.getElementById('reviews-modal-file-input');
 let modalFileButton = document.getElementById('reviews-modal-file-button');
 
@@ -35,7 +51,6 @@ modalFileButton.addEventListener('click', () => {
 
 modalFileInput.addEventListener('change', (e) => {
   const [file] = e.target.files;
-  console.log(file.name);
 
   if(file.name.length < 20) {
     modalFileButton.textContent = file.name;
