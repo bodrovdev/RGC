@@ -27,9 +27,9 @@
     <button class="consult-modal__close-button base-button" id="consult-modal-close">
       <div class="consult-modal__close-inner"></div>
     </button>
-    <div class="consult-modal__inner">
+    <div class="consult-modal__inner" id="consult-modal-main">
       <h2 class="consult-modal__title base-title">Заказать консультацию</h2>
-      <form class="consult-modal__form" method="post">
+      <form class="consult-modal__form" method="post" id="consult-modal-form">
         <input class="consult-modal__input" type="text" placeholder="Ваше имя">
         <input class="consult-modal__input" type="tel" placeholder="Телефон">
         <input class="consult-modal__input" type="email" placeholder="Email">
@@ -46,6 +46,12 @@
         пользовательских данных
       </p>
     </div>
+    <div class="consult-modal__success" id="consult-modal-success">
+      <h2 class="consult-modal__success-title base-title">Спасибо за обращение!</h2>
+      <p class="consult__success-text base-par">
+        Ваша заявка принята.
+      </p>
+    </div>
   </div>
 </section>
 	<section class="reviews-modal" id="reviews-modal">
@@ -53,9 +59,9 @@
     <button class="reviews-modal__close-button base-button" id="reviews-modal-close">
       <div class="reviews-modal__close-inner"></div>
     </button>
-    <div class="reviews-modal__inner">
+    <div class="reviews-modal__inner" id="reviews-modal-main">
       <h2 class="reviews-modal__title base-title">Оставить отзыв</h2>
-      <form class="reviews-modal__form">
+      <form class="reviews-modal__form" id="reviews-modal-form"r>
         <div class="reviews-modal__form-inner">
           <div class="reviews-modal__form-column">
             <input class="reviews-modal__form-input" type="text" placeholder="ФИО">
@@ -79,6 +85,13 @@
           </button>
         </div>
       </form>
+    </div>
+    <div class="reviews-modal__success" id="reviews-modal-success">
+      <h2 class="reviews-modal__success-title base-title">Спасибо, ваш отзыв отправлен!</h2>
+      <p class="reviews__success-text base-par">
+        После проверки модератором,<br>
+        отзыв появится в общей ленте.
+      </p>
     </div>
   </div>
 </section>
