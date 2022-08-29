@@ -81,6 +81,20 @@ readMore.forEach((elem) => {
   })
 })
 
+//Скрытие и показ заголовка элемента в зависимости от его наполнения на странице about в блоке subject
+
+let subjectTitle = document.querySelectorAll('.subject__desc-title');
+console.log(subjectTitle);
+
+window.addEventListener('load', () => {
+  subjectTitle.forEach((element) => {
+    if (element.textContent.length === 0) {
+      element.classList.add('subject__desc-title--empty');
+    }
+  })
+})
+
+
 
 
 

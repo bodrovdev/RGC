@@ -43,3 +43,26 @@ const reviews_slider = new Swiper('.reviews__slider', {
     prevEl: '.reviews__slider-button--prev',
   },
 }); 
+
+//Слайдер из блока projects
+
+const projects_slider = new Swiper('.projects__slider', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 25,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    
+    1024: {
+      slidesPerView: 3,
+    }
+  },
+
+  navigation: {
+    nextEl: '.projects__slider-button--next',
+    prevEl: '.projects__slider-button--prev',
+  },
+}); 

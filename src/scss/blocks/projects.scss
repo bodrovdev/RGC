@@ -1,0 +1,123 @@
+@use "../mixins";
+
+.projects {
+
+  padding: 45px 0 45px 0;
+  margin-top: 90px;
+
+  @include mixins.respond-to(mobileOnly) {
+    margin-top: 60px;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    margin-top: 60px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__headline {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+    }
+  }
+
+  &__slider {
+    margin: 0 -10px 25px -10px;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 5% 25px 5%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 5% 25px 5%;
+    }
+  }
+
+  &__slider-item {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 410px;
+    border-radius: 20px;
+    overflow: hidden;    
+    cursor: default;
+
+    transition: 0.3s;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+    }
+  }
+
+  &__item-glightbox {
+    &:hover~.projects__item-overlay {
+      opacity: 1;
+
+      transition: all 0.3s;
+    }
+  }
+
+  &__item-img {
+    width: 410px;
+    height: auto;
+    border-radius: 20px;
+
+    z-index: 1;
+  }
+
+  &__item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 410px;
+    height: 100%;
+    background: url("../../img/image/design/pupa.svg") rgb(0, 0, 0, 0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 2;
+  }
+
+  &__item-bottomline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    width: 410px;
+    height: 120px;
+    background-color: var(--color-black);
+    border-radius: 0 0 20px 20px;
+
+    z-index: 3;
+  }
+}
