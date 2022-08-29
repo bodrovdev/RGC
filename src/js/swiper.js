@@ -66,3 +66,26 @@ const projects_slider = new Swiper('.projects__slider', {
     prevEl: '.projects__slider-button--prev',
   },
 }); 
+
+//Слайдер из блока clients
+
+const clients_slider = new Swiper('.clients__slider', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 25,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    
+    1024: {
+      slidesPerView: 3,
+    }
+  },
+
+  navigation: {
+    nextEl: '.clients__slider-button--next',
+    prevEl: '.clients__slider-button--prev',
+  },
+}); 

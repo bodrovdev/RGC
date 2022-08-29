@@ -44,8 +44,10 @@
 @use 'blocks/reviews';
 @use 'blocks/consult-modal';
 @use 'blocks/reviews-modal';
+@use 'blocks/subject';
+@use 'blocks/projects';
+@use 'blocks/clients';
 
 @use 'blocks/footer-main';
 @use 'blocks/footer-feedback';
-@use 'blocks/footer-underline';@use 'blocks/subject';
-@use 'blocks/projects';
+@use 'blocks/footer-underline';
