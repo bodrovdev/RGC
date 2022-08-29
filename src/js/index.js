@@ -84,7 +84,6 @@ readMore.forEach((elem) => {
 //Скрытие и показ заголовка элемента в зависимости от его наполнения на странице about в блоке subject
 
 let subjectTitle = document.querySelectorAll('.subject__desc-title');
-console.log(subjectTitle);
 
 window.addEventListener('load', () => {
   subjectTitle.forEach((element) => {
@@ -94,6 +93,38 @@ window.addEventListener('load', () => {
   })
 })
 
+//Скрытие и показ дополнительной информации на слайдах в блоке projects
+
+let projectsSliderItem = document.querySelectorAll('.projects__slider-item');
+let projectsLearnMore = document.querySelectorAll('.projects__bottom-learnmore');
+let projectsDesc = document.querySelectorAll('.projects__item-desc');
+
+projectsLearnMore.forEach((element) => {
+  element.addEventListener('click', () => {
+    projectsDesc.forEach((value) => {
+     if (element.parentElement.parentElement === value.parentElement) {
+      value.classList.add('projects__item-desc--active');
+      element.parentElement.classList.add('projects__item-bottomline--disable')
+     }
+    })
+  })
+})
+
+projectsSliderItem.forEach((element) => {
+  element.addEventListener('mouseleave', () => {
+    projectsDesc.forEach((value) => {
+      projectsLearnMore.forEach((item) => {
+        value.classList.contains('projects__item-desc--active') ? 
+        value.classList.remove('projects__item-desc--active') 
+        : value;
+
+        item.parentElement.classList.contains('projects__item-bottomline--disable') ? 
+        item.parentElement.classList.remove('projects__item-bottomline--disable') 
+        : item;
+      })
+    })
+  })
+})
 
 
 
