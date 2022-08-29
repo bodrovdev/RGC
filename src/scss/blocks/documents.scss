@@ -116,6 +116,13 @@
     max-width: 100%;
     height: auto;
     vertical-align: top;
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s;
+    }
   }
 
   &__item-name {

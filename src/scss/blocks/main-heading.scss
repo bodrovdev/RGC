@@ -30,13 +30,13 @@
 
     padding-top: 130px;
 
-    z-index: 10;
+    z-index: 2;
   }
 
   &__breadcrumbs {
     margin-bottom: 40px;
 
-    z-index: 10;
+    z-index: 2;
   }
 
   &__breadcrumbs span {
@@ -49,7 +49,7 @@
     line-height: 19px;
     color: var(--color-silver-chalice);
 
-    z-index: 10;
+    z-index: 2;
   }
 
   &__main-page {
@@ -75,7 +75,7 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: var(--color-white);
 
-    z-index: 10;
+    z-index: 2;
   }
 
   & .features {
@@ -84,14 +84,14 @@
     left: 50%;
     transform: translateX(-50%);
 
-    z-index: 5;
+    z-index: 2;
 
     @include mixins.respond-to(mobileOnly) {
-      display: none !important;
+      bottom: 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      bottom: 60px;
+      bottom: 10px;
     }
   }
 }

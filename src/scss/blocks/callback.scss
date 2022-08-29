@@ -2,6 +2,12 @@
 
 .callback {
 
+  &:hover .callback__img, .callback__img-overlay {
+    transform: scale(1.1);
+
+    transition: all 0.5s;
+  }
+
   @include mixins.respond-to(mobileOnly) {
     margin-top: 60px;
   }
@@ -290,6 +296,7 @@
   &__image-inner {
     position: relative;
 
+    border-radius: 20px;
     overflow: hidden;
   }
 
@@ -299,6 +306,8 @@
     height: auto;
 
     border-radius: 20px;
+
+    transition: 0.5s;
 
     z-index: 5;
 
@@ -337,6 +346,8 @@
     height: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.41));
     border-radius: 20px;
+
+    transition: 0.5s;
 
     z-index: 6;
   }
