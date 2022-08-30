@@ -78,6 +78,31 @@ const clients_slider = new Swiper('.clients__slider', {
     320: {
       slidesPerView: 1,
     },
+
+    768: {
+      slidesPerView: 2,
+    },
+    
+    1024: {
+      slidesPerView: 4,
+    }
+  },
+
+  navigation: {
+    nextEl: '.clients__slider-button--next',
+    prevEl: '.clients__slider-button--prev',
+  },
+}); 
+
+const certis_slider = new Swiper('.certis__slider', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 25,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
     
     1024: {
       slidesPerView: 3,
@@ -85,7 +110,7 @@ const clients_slider = new Swiper('.clients__slider', {
   },
 
   navigation: {
-    nextEl: '.clients__slider-button--next',
-    prevEl: '.clients__slider-button--prev',
+    nextEl: '.certis__slider-button--next',
+    prevEl: '.certis__slider-button--prev',
   },
 }); 

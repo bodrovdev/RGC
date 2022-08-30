@@ -71,10 +71,18 @@
     grid-column-gap: 23px;
     align-items: stretch;
 
+    // @include mixins.respond-to(mobileOnly) {
+    //   grid-template: repeat(3, auto) / 1fr;
+    //   grid-column-gap: 0;
+    //   grid-row-gap: 20px;
+    // }
+
     @include mixins.respond-to(mobileOnly) {
-      grid-template: repeat(3, auto) / 1fr;
-      grid-column-gap: 0;
-      grid-row-gap: 20px;
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+      overflow-x: auto;
     }
   }
 
@@ -89,6 +97,14 @@
     overflow: hidden;
 
     padding: 20px 28px 38px 35px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+
+      margin-right: 20px;
+    }
 
     @include mixins.respond-to(tabletOnly) {
       padding: 20px 10px 20px 10px;

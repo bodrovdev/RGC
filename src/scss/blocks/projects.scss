@@ -1,23 +1,18 @@
 @use "../mixins";
 
 .projects {
-
-  padding: 45px 0 45px 0;
+  position: relative;
 
   @include mixins.respond-to(mobileOnly) {
-    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
-  @include mixins.respond-to(tabletOnly) {
-    margin-top: 60px;
+  @include mixins.respond-to(tablet) {
+    margin-bottom: 60px;
   }
 
-  @include mixins.respond-to(desktopS) {
-    margin-top: 60px;
-  }
-
-  @include mixins.respond-to(desktopD) {
-    margin-top: 90px;
+  @include mixins.respond-to(desktopM) {
+    margin-bottom: 90px;
   }
 
   &__container {
@@ -26,8 +21,6 @@
   }
 
   &__headline {
-    position: relative;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,10 +29,8 @@
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
-    }
 
-    @include mixins.respond-to(tabletOnly) {
-      flex-direction: column;
+      margin-bottom: 20px;
     }
   }
 
@@ -49,31 +40,21 @@
     }
   }
 
-  @media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 424px) {
-    &__slider-navigation {
-      top: 80% !important;
-    }
-  }
-
-  @media only screen
-  and (min-device-width: 425px)
-  and (max-device-width: 520px) {
-    &__slider-navigation {
-      top: 150% !important;
+  &__slider-navigation {
+    @include mixins.respond-to(mobileOnly) {
+      top: 50% !important;
     }
   }
 
   &__slider {
-    margin: 0 -10px 25px -10px;
+    margin: 0 -10px 0 -10px;
 
     @include mixins.respond-to(mobileOnly) {
-      margin: 0 5% 25px 5%;
+      margin: 0 5% 0 5%;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin: 0 5% 25px 5%;
+      margin: 0 5% 0 5%;
     }
   }
 
@@ -245,7 +226,7 @@
   }
 
   &__item-bottomline--disable {
-    transform: translateY(-400%);
+    transform: translateY(-600%);
 
     transition: all 0.2s;
   }

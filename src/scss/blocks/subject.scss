@@ -1,10 +1,17 @@
 @use "../mixins";
 
 .subject {
-  margin-top: 110px;
 
   @include mixins.respond-to(mobileOnly) {
-    margin-top: 60px;
+    margin: 60px 0 60px 0;
+  }
+
+  @include mixins.respond-to(tablet) {
+    margin: 60px 0 60px 0;
+  }
+
+  @include mixins.respond-to(desktopM) {
+    margin: 110px 0 90px 0;
   }
 
   &__container {
@@ -70,7 +77,7 @@
     &:nth-child(2) {
       align-items: center;
 
-      margin-bottom: 140px;
+      margin-bottom: 90px;
 
       @include mixins.respond-to(mobileOnly) {
         align-items: flex-start;
@@ -98,6 +105,18 @@
     }
 
     &:nth-child(3) {
+      align-items: center;
+
+      background-color: var(--color-vista-white);
+      box-shadow: 0px 0px 42px rgba(0, 0, 0, 0.07);
+      border-radius: 20px;
+
+      padding: 42px 0 47px 53px;
+
+      @include mixins.respond-to(mobileOnly) {
+        padding: 10px 5px 10px 5px;
+      }
+
       & .subject__media-block {
         order: 2;
 
@@ -125,6 +144,12 @@
           order: 2;
 
           margin: 20px 0 0 0;
+        }
+      }
+
+      & .subject__desc-title {
+        @include mixins.respond-to(desktopS) {
+          margin-bottom: 30px;
         }
       }
     }

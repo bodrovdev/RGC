@@ -42,18 +42,7 @@ body {
 
 	@include mixins.respond-to(mobileOnly) {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 0;
-
-		justify-content: space-between;
-
-		width: 100%;
-	}
-
-	@include mixins.respond-to(tabletOnly) {
-		position: absolute;
-		top: 50%;
+		top: 40%;
 		transform: translateY(-50%);
 		left: 0;
 
@@ -69,6 +58,11 @@ body {
 	stroke-width: 3;
 
 	transition: 0.3s;
+
+	@include mixins.respond-to(mobileOnly) {
+		width: 8px;
+		height: 13px;
+	}
 }
 
 .slider-button {
@@ -119,8 +113,10 @@ body {
 	}
 
 	@include mixins.respond-to(mobileOnly) {
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
+
+		border: 1px solid var(--color-alto);
 	}
 
 	@include mixins.respond-to(tabletOnly) {

@@ -1,6 +1,7 @@
 @use "../mixins";
 
 .reviews {
+  position: relative;
 
   background: url('../img/image/design/reviews-background.jpg');
   background-size: cover;
@@ -23,8 +24,6 @@
   }
 
   &__headline {
-    position: relative;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,10 +31,6 @@
     margin-bottom: 45px;
 
     @include mixins.respond-to(mobileOnly) {
-      flex-direction: column;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
       flex-direction: column;
     }
   }
