@@ -1,0 +1,66 @@
+@use "../mixins";
+
+.engine-inner {
+
+  &__top, .engine-inner__bottom {
+    display: flex;
+    align-items: flex-end;
+
+    box-sizing: border-box;
+    min-height: 700px;
+    background: url("../img/image/design/engine-tabs-blocks-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding-bottom: 100px;
+  }
+
+  &__top-container, .engine-inner__bottom-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+  }
+
+  &__middle-container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 60px;
+  }
+
+  &__top-info, .engine-inner__middle-info, .engine-inner__bottom-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top-title, .engine-inner__middle-title, .engine-inner__bottom-title {
+    margin-bottom: 60px;
+  }
+
+  &__top-text, .engine-inner__middle-text, .engine-inner__bottom-text {
+    display: inline-block;
+
+    max-width: 685px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--color-mine-shaft);
+
+    margin-bottom: 40px;
+  }
+
+  &__top-number, .engine-inner__middle-number, .engine-inner__bottom-number {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-mine-shaft);
+  }
+
+  &__consult-button {
+    width: 300px;
+
+    margin-top: 90px;
+  }
+}

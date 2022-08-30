@@ -44,10 +44,15 @@
 @use 'blocks/reviews';
 @use 'blocks/consult-modal';
 @use 'blocks/reviews-modal';
+
 @use 'blocks/subject';
 @use 'blocks/projects';
 @use 'blocks/clients';
 @use 'blocks/certis';
+
+@use 'blocks/engine-tabs';
+@use 'blocks/engine-inner';
+
 
 @use 'blocks/footer-main';
 @use 'blocks/footer-feedback';

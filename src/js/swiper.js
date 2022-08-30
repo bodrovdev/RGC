@@ -94,6 +94,8 @@ const clients_slider = new Swiper('.clients__slider', {
   },
 }); 
 
+//Слайдер из блока certis
+
 const certis_slider = new Swiper('.certis__slider', {
   direction: 'horizontal',
   slidesPerView: 3,

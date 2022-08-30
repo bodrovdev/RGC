@@ -17,7 +17,7 @@ burger.addEventListener('click', () => {
   }
 })
 
-//Табы в блоке engine
+//Табы в блоке engine на главной странице
 
 let engineTabsButtons = document.querySelectorAll('.engine__tabs-button');
 let engineTabsItems = document.querySelectorAll('.engine__tabs-itemset');
@@ -40,7 +40,7 @@ engineTabsButtons.forEach((item) => {
   })
 })
 
-//Табы в блоке consulting
+//Табы в блоке consulting на главной странице
 
 let consultTabsButtons = document.querySelectorAll('.consulting__tabs-button');
 let consultTabsItems = document.querySelectorAll('.consulting__tabs-itemset');
