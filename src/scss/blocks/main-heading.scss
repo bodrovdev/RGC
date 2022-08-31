@@ -76,6 +76,11 @@
     color: var(--color-white);
 
     z-index: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 25px;
+      line-height: 1.25;
+    }
   }
 
   & .features {

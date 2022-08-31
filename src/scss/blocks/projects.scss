@@ -37,6 +37,8 @@
   &__title {
     @include mixins.respond-to(mobileOnly) {
       text-align: center;
+
+      margin-right: 10px;
     }
   }
 
