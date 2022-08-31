@@ -2,6 +2,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 
 //Мобильное меню
+
 let burger = document.getElementById('nav-burger');
 let mobileMenu = document.getElementById('nav-mobile-menu');
 
@@ -65,17 +66,35 @@ consultTabsButtons.forEach((item) => {
 
 //Сворачивание и разворачивание текста отзывов в блоке reviews
 
-let readMore = document.querySelectorAll('.reviews__item-controller');
-let reviewsBody = document.querySelectorAll('.reviews__item-body');
+let reviewsReadMore = document.querySelectorAll('.reviews__item-controller');
+let reviewsItemBody = document.querySelectorAll('.reviews__item-body');
 
-readMore.forEach((elem) => {
+reviewsReadMore.forEach((elem) => {
   elem.addEventListener('click', () => {
-    reviewsBody.forEach((value) => {
+    reviewsItemBody.forEach((value) => {
       if (elem.parentElement === value.parentElement) {
         value.classList.toggle('reviews__item-body--full');
         value.classList.contains('reviews__item-body--full') ? 
           elem.children.item(0).textContent = 'Свернуть отзыв' : 
           elem.children.item(0).textContent = 'Читать весь отзыв';
+      }
+    })
+  })
+})
+
+//Сворачивание и разворачивание текста услуги на странице consulting
+
+let consultReadMore = document.querySelectorAll('.consult-inner__item-controller');
+let consultItemBody = document.querySelectorAll('.consult-inner__item-text');
+
+consultReadMore.forEach((elem) => {
+  elem.addEventListener('click', () => {
+    consultItemBody.forEach((value) => {
+      if (elem.parentElement === value.parentElement) {
+        value.classList.toggle('consult-inner__item-text--full');
+        value.classList.contains('consult-inner__item-text--full') ? 
+          elem.innerHTML = 'Показывать меньше информации' : 
+          elem.innerHTML = 'Показать всю информацию';
       }
     })
   })

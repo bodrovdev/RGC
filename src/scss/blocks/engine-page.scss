@@ -12,15 +12,18 @@
   }
 
   &__buttons-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template: auto / repeat(3, auto);
+    grid-gap: 20px;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
 
     @include mixins.respond-to(mobileOnly) {
-      flex-direction: column;
+      grid-template: repeat(3, auto) / auto;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      flex-direction: column;
+      grid-template: repeat(3, auto) / auto;
     }
   }
 
@@ -29,7 +32,7 @@
 
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-start;
 
     width: 410px;
     height: 185px;
@@ -38,13 +41,17 @@
     overflow: hidden;
     cursor: pointer;
 
-    padding-bottom: 30px;
+    padding: 10px 10px 30px 10px;
 
     z-index: 1;
 
     @include mixins.respond-to(mobileOnly) {
+      align-items: center;
+      justify-content: center;
+
       width: 100%;
 
+      padding: 10px;
       margin-bottom: 15px;
 
       &:last-child {
@@ -53,8 +60,12 @@
     }
     
     @include mixins.respond-to(tabletOnly) {
+      align-items: center;
+      justify-content: center;
+
       width: 100%;
 
+      padding: 10px;
       margin-bottom: 15px;
 
       &:last-child {

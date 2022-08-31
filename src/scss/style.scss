@@ -50,9 +50,11 @@
 @use 'blocks/clients';
 @use 'blocks/certis';
 
-@use 'blocks/engine-tabs';
+@use 'blocks/engine-page';
 @use 'blocks/engine-inner';
 
+@use 'blocks/consult-page';
+@use 'blocks/consult-inner';
 
 @use 'blocks/footer-main';
 @use 'blocks/footer-feedback';

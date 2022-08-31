@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/base-blocks/_base-head.html', {
+"title": "RGC - консалтинговые услуги"
+})
+<body>
+  @@include('components/bam-blocks/_success-modal.html')
+
+	@@include('components/bam-blocks/_consult-modal.html')
+
+  @@include('components/bam-blocks/_reviews-modal.html')
+
+  @@include('components/base-blocks/_base-header.html', {
+    "current-page": "консалтинговые услуги"
+})
+  <style>
+    .main-heading {
+      background: url('img/image/design/engine-heading-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+<main class="page-content">
+  <section class="consult-tabs">
+    <div class="consult-tabs__buttons">
+      <div class="consult-tabs__buttons-container base-container">
+        <a class="consult-tabs__button base-link" href="#main-consult-tabs-1">
+          <img class="consult-tabs__button-img" src="img/image/design/engine-tabs-button-background-1.png" alt="">
+          <div class="consult-tabs__button-overlay"></div>
+          <div class="consult-tabs__button-info">
+            <h2 class="consult-tabs__button-title base-title">Управленческие услуги</h2>
+            <div class="consult-tabs__button-learnmore">
+              <span class="consult-tabs__learnmore-text">Подробнее</span>
+              <svg class="consult-tabs__learnmore-icon" width="47" height="8">
+                <use href="img/icon/sprite.svg#yellow-arrow-icon"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="consult-tabs__button consult-tabs__button--active base-link" href="#main-consult-tabs-2">
+          <img class="consult-tabs__button-img" src="img/image/design/engine-tabs-button-background-2.png" alt="">
+          <div class="consult-tabs__button-overlay"></div>
+          <div class="consult-tabs__button-info">
+            <h2 class="consult-tabs__button-title base-title">HR-услуги</h2>
+            <div class="consult-tabs__button-learnmore">
+              <span class="consult-tabs__learnmore-text">Подробнее</span>
+              <svg class="consult-tabs__learnmore-icon" width="47" height="8">
+                <use href="img/icon/sprite.svg#yellow-arrow-icon"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="consult-tabs__button base-link" href="#main-consult-tabs-3">
+          <img class="consult-tabs__button-img" src="img/image/design/engine-tabs-button-background-3.png" alt="">
+          <div class="consult-tabs__button-overlay"></div>
+          <div class="consult-tabs__button-info">
+            <h2 class="consult-tabs__button-title base-title">Проектные услуги</h2>
+            <div class="consult-tabs__button-learnmore">
+              <span class="consult-tabs__learnmore-text">Подробнее</span>
+              <svg class="consult-tabs__learnmore-icon" width="47" height="8">
+                <use href="img/icon/sprite.svg#yellow-arrow-icon"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="consult-tabs__button base-link" href="#main-consult-tabs-4">
+          <img class="consult-tabs__button-img" src="img/image/design/engine-tabs-button-background-3.png" alt="">
+          <div class="consult-tabs__button-overlay"></div>
+          <div class="consult-tabs__button-info">
+            <h2 class="consult-tabs__button-title base-title">IT-услуги</h2>
+            <div class="consult-tabs__button-learnmore">
+              <span class="consult-tabs__learnmore-text">Подробнее</span>
+              <svg class="consult-tabs__learnmore-icon" width="47" height="8">
+                <use href="img/icon/sprite.svg#yellow-arrow-icon"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="consult-tabs__body">
+      <div class="consult-tabs__item" id="main-consult-tabs-1">
+      </div>
+      <div class="consult-tabs__item consult-tabs__item--active" id="main-consult-tabs-2">
+        <section class="consult-inner">
+          <div class="consult-inner__item">
+            <div class="consult-inner__item-container base-container">
+              <div class="consult-inner__item-info">
+                <h2 class="consult-inner__item-title section-title base-title">Аудит структуры управления</h2>
+                <p class="consult-inner__item-text base-par">
+                  С другой стороны дальнейшее развитие различных форм деятельности 
+                  позволяет оценить значение новых предложений. Товарищи! 
+                  консультация с широким активом играет важную роль в 
+                  формировании соответствующий условий активизации.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.
+                </p>
+                <button class="consult-inner__item-controller base-button">Показать всю информацию</button>
+                <button class="consult-inner__consult-button consult-modal-button base-button">
+                  <span class="consult-inner__consult-text">Заказать консультацию</span>
+                  <svg class="consult-inner__consult-icon" width="55" height="8">
+                    <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <figure class="consult-inner__item-image base-figure">
+                <img class="consult-inner__item-img" src="img/image/design/consult-tabs-2-item-1.png" alt="Фото автомобиля и завода">
+              </figure>
+            </div>
+          </div>
+          <div class="consult-inner__item">
+            <div class="consult-inner__item-container base-container">
+              <div class="consult-inner__item-info">
+                <h2 class="consult-inner__item-title section-title base-title">Аудин бизнес процессов</h2>
+                <p class="consult-inner__item-text base-par">
+                  С другой стороны дальнейшее развитие различных форм деятельности 
+                  позволяет оценить значение новых предложений. Товарищи! 
+                  консультация с широким активом играет важную роль в 
+                  формировании соответствующий условий активизации.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.
+                </p>
+                <button class="consult-inner__item-controller base-button">Показать всю информацию</button>
+                <button class="consult-inner__consult-button consult-modal-button base-button">
+                  <span class="consult-inner__consult-text">Заказать консультацию</span>
+                  <svg class="consult-inner__consult-icon" width="55" height="8">
+                    <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <figure class="consult-inner__item-image base-figure">
+                <img class="consult-inner__item-img" src="img/image/design/consult-tabs-2-item-2.png" alt="Фото автомобиля и завода">
+              </figure>
+            </div>
+          </div>
+          <div class="consult-inner__item">
+            <div class="consult-inner__item-container base-container">
+              <div class="consult-inner__item-info">
+                <h2 class="consult-inner__item-title section-title base-title">Аудит функционала и регламентов</h2>
+                <p class="consult-inner__item-text base-par">
+                  С другой стороны дальнейшее развитие различных форм деятельности 
+                  позволяет оценить значение новых предложений. Товарищи! 
+                  консультация с широким активом играет важную роль в 
+                  формировании соответствующий условий активизации.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.
+                </p>
+                <button class="consult-inner__item-controller base-button">Показать всю информацию</button>
+                <button class="consult-inner__consult-button consult-modal-button base-button">
+                  <span class="consult-inner__consult-text">Заказать консультацию</span>
+                  <svg class="consult-inner__consult-icon" width="55" height="8">
+                    <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <figure class="consult-inner__item-image base-figure">
+                <img class="consult-inner__item-img" src="img/image/design/consult-tabs-2-item-3.png" alt="Фото автомобиля и завода">
+              </figure>
+            </div>
+          </div>
+          <div class="consult-inner__item">
+            <div class="consult-inner__item-container base-container">
+              <div class="consult-inner__item-info">
+                <h2 class="consult-inner__item-title section-title base-title">Участие в собеседовании при подборе</h2>
+                <p class="consult-inner__item-text base-par">
+                  С другой стороны дальнейшее развитие различных форм деятельности 
+                  позволяет оценить значение новых предложений. Товарищи! 
+                  консультация с широким активом играет важную роль в 
+                  формировании соответствующий условий активизации.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель 
+                  организационной деятельности влечет за собой процесс 
+                  внедрения и модернизации дальнейших направлений развития. 
+                  Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.
+                </p>
+                <button class="consult-inner__item-controller base-button">Показать всю информацию</button>
+                <button class="consult-inner__consult-button consult-modal-button base-button">
+                  <span class="consult-inner__consult-text">Заказать консультацию</span>
+                  <svg class="consult-inner__consult-icon" width="55" height="8">
+                    <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <figure class="consult-inner__item-image base-figure">
+                <img class="consult-inner__item-img" src="img/image/design/consult-tabs-2-item-4.png" alt="Фото автомобиля и завода">
+              </figure>
+            </div>
+          </div>
+          <div class="consult-inner__service-info">
+            <div class="consult-inner__service-container base-container">
+              <h2 class="consult-inner__service-title section-title base-title">Краткая информация об услуге</h2>
+              <p class="consult-inner__service-text base-par">
+                Текст для СЕО.<br>С другой стороны дальнейшее развитие 
+                различных форм деятельности позволяет оценить значение 
+                новых предложений. Товарищи! консультация с широким активом 
+                играет важную роль в формировании соответствующий условий активизации.<br>
+                <br>
+                Идейные соображения высшего порядка, а также новая модель организационной 
+                деятельности влечет за собой процесс внедрения и модернизации дальнейших 
+                направлений развития. Повседневная практика показывает, что постоянный 
+                количественный рост и сфера нашей.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="consult-tabs__item" id="main-consult-tabs-3">
+      </div>
+      <div class="consult-tabs__item" id="main-consult-tabs-4">
+      </div>
+    </div>
+  </section>
+  @@include('components/bam-blocks/_projects.html')
+</main>
+
+@@include('components/base-blocks/_base-footer.html')
+
+<script src="js/index.min.js"></script>
+</body>
+</html>

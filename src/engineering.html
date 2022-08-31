@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/base-blocks/_base-head.html', {
+"title": "RGC - инжиниринговые услуги"
+})
+<body>
+  @@include('components/bam-blocks/_success-modal.html')
+
+	@@include('components/bam-blocks/_consult-modal.html')
+
+  @@include('components/bam-blocks/_reviews-modal.html')
+
+  @@include('components/base-blocks/_base-header.html', {
+    "current-page": "Инжиниринговые услуги"
+})
+  <style>
+    .main-heading {
+      background: url('img/image/design/engine-heading-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style> 
+
+  <main class="page-content">
+    <section class="engine-tabs">
+      <div class="engine-tabs__buttons">
+        <div class="engine-tabs__buttons-container base-container">
+          <a class="engine-tabs__button base-link" href="#main-engine-tabs-1">
+            <img class="engine-tabs__button-img" src="img/image/design/engine-tabs-button-background-1.png" alt="">
+            <div class="engine-tabs__button-overlay"></div>
+            <div class="engine-tabs__button-info">
+              <h2 class="engine-tabs__button-title base-title">Управление проектами</h2>
+              <div class="engine-tabs__button-learnmore">
+                <span class="engine-tabs__learnmore-text">Подробнее</span>
+                <svg class="engine-tabs__learnmore-icon" width="47" height="8">
+                  <use href="img/icon/sprite.svg#yellow-arrow-icon"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <a class="engine-tabs__button engine-tabs__button--active base-link" href="#main-engine-tabs-2">
+            <img class="engine-tabs__button-img" src="img/image/design/engine-tabs-button-background-2.png" alt="">
+            <div class="engine-tabs__button-overlay"></div>
+            <div class="engine-tabs__button-info">
+              <h2 class="engine-tabs__button-title base-title">Управление поставками</h2>
+              <div class="engine-tabs__button-learnmore">
+                <span class="engine-tabs__learnmore-text">Подробнее</span>
+                <svg class="engine-tabs__learnmore-icon" width="47" height="8">
+                  <use href="img/icon/sprite.svg#yellow-arrow-icon"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <a class="engine-tabs__button base-link" href="#main-engine-tabs-3">
+            <img class="engine-tabs__button-img" src="img/image/design/engine-tabs-button-background-3.png" alt="">
+            <div class="engine-tabs__button-overlay"></div>
+            <div class="engine-tabs__button-info">
+              <h2 class="engine-tabs__button-title base-title">Управление логистикой</h2>
+              <div class="engine-tabs__button-learnmore">
+                <span class="engine-tabs__learnmore-text">Подробнее</span>
+                <svg class="engine-tabs__learnmore-icon" width="47" height="8">
+                  <use href="img/icon/sprite.svg#yellow-arrow-icon"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="engine-tabs__body">
+        <div class="engine-tabs__item" id="main-engine-tabs-1">
+          <section class="engine-inner">
+            <div class="engine-inner__top">
+              <div class="engine-inner__top-container base-container">
+                <div class="engine-inner__top-info">
+                  <h2 class="engine-inner__top-title section-title base-title">Lorem, ipsum.</h2>
+                  <p class="engine-inner__top-text base-par">
+                    Lorem ipsum dolor sit, a
+                    met consectetur adipisicing 
+                    elit. Modi impedit facilis 
+                    aspernatur placeat ipsa cupiditate 
+                    eveniet voluptate, corporis 
+                    iure expedita unde similique, quam fuga 
+                    voluptates consequatur optio pariatur 
+                    autem amet.
+                  </p>
+                  <span class="engine-inner__top-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__top-image base-figure">
+                  <img class="engine-inner__top-img" src="img/image/design/engine-tabs-top-2.png" alt="Фото автомобиля и завода">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__middle">
+              <div class="engine-inner__middle-container base-container">
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--1 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-1.png" alt="">
+                </figure>
+                <div class="engine-inner__middle-info engine-inner__middle-item engine-inner__middle-item--2">
+                  <h2 class="engine-inner__middle-title section-title base-title">Lorem ipsum dolor sit amet.</h2>
+                  <p class="engine-inner__middle-text base-par">
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Similique, iste libero 
+                    excepturi aut deleniti vitae ullam expedita 
+                    deserunt tenetur corrupti eos dolorem, 
+                    rem possimus! Amet nulla commodi dicta tempore magni.
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Similique, iste libero 
+                    excepturi aut deleniti vitae ullam expedita 
+                    deserunt tenetur corrupti eos dolorem, 
+                    rem possimus! Amet nulla commodi dicta tempore magni.
+                  </p>
+                  <span class="engine-inner__middle-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--3 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-2.png" alt="">
+                </figure>
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--4 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-3.png" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__bottom">
+              <div class="engine-inner__bottom-container base-container">
+                <div class="engine-inner__bottom-info">
+                  <h2 class="engine-inner__bottom-title section-title base-title">Lorem, ipsum dolor.</h2>
+                  <p class="engine-inner__bottom-text base-par">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Tempore aliquid velit eum id incidunt fuga 
+                    voluptatibus odit perspiciatis blanditiis expedita. 
+                    Quidem perferendis facere id, qui, obcaecati rem 
+                    illum asperiores necessitatibus veritatis porro 
+                    inventore! Fugiat ipsa ut sequi dolores neque 
+                    officiis nulla vel sed ipsam. Debitis possimus 
+                    laudantium numquam, harum vitae consectetur, 
+                    reiciendis expedita suscipit quisquam totam dolorum 
+                    blanditiis, ad enim.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                  <span class="engine-inner__bottom-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__bottom-image base-figure">
+                  <img class="engine-inner__bottom-img" src="img/image/design/engine-tabs-bottom-2.png" alt="Фото грузчиков">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__service-info">
+              <div class="engine-inner__service-container base-container">
+                <h2 class="engine-inner__service-title section-title base-title">Краткая информация об услуге</h2>
+                <p class="engine-inner__service-text base-par">
+                  Lorem ipsum dolor sit 
+                  amet consectetur adipisicing 
+                  elit. Mollitia soluta pariatur 
+                  iusto autem, culpa cupiditate porro 
+                  tenetur quia quidem repudiandae.
+                  Lorem ipsum dolor sit 
+                  amet consectetur adipisicing 
+                  elit. Mollitia soluta pariatur 
+                  iusto autem, culpa cupiditate porro 
+                  tenetur quia quidem repudiandae.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="engine-tabs__item engine-tabs__item--active" id="main-engine-tabs-2">
+          <section class="engine-inner">
+            <div class="engine-inner__top">
+              <div class="engine-inner__top-container base-container">
+                <div class="engine-inner__top-info">
+                  <h2 class="engine-inner__top-title section-title base-title">Закупка у Завода</h2>
+                  <p class="engine-inner__top-text base-par">
+                    С другой стороны дальнейшее развитие различных 
+                    форм деятельности позволяет оценить значение 
+                    новых предложений. Товарищи! консультация с 
+                    широким активом играет важную роль в формировании 
+                    соответствующий условий активизации. “<br>
+                    <br>
+                    Идейные соображения высшего порядка, а 
+                    также новая модель организационной деятельности 
+                    влечет за собой процесс внедрения и модернизации 
+                    дальнейших направлений развития. Повседневная 
+                    практика показывает, что постоянный 
+                    количественный рост и сфера нашей.
+                  </p>
+                  <span class="engine-inner__top-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__top-image base-figure">
+                  <img class="engine-inner__top-img" src="img/image/design/engine-tabs-top-2.png" alt="Фото автомобиля и завода">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__middle">
+              <div class="engine-inner__middle-container base-container">
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--1 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-1.png" alt="">
+                </figure>
+                <div class="engine-inner__middle-info engine-inner__middle-item engine-inner__middle-item--2">
+                  <h2 class="engine-inner__middle-title section-title base-title">Закупка у Дилеров</h2>
+                  <p class="engine-inner__middle-text base-par">
+                    С другой стороны дальнейшее развитие различных 
+                    форм деятельности позволяет оценить значение 
+                    новых предложений. Товарищи! консультация с 
+                    широким активом играет важную роль в формировании 
+                    соответствующий условий активизации. “<br>
+                    <br>
+                    Идейные соображения высшего порядка, а 
+                    также новая модель организационной деятельности 
+                    влечет за собой процесс внедрения и модернизации 
+                    дальнейших направлений развития. Повседневная 
+                    практика показывает, что постоянный 
+                    количественный рост и сфера нашей.
+                  </p>
+                  <span class="engine-inner__middle-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--3 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-2.png" alt="">
+                </figure>
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--4 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-3.png" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__bottom">
+              <div class="engine-inner__bottom-container base-container">
+                <div class="engine-inner__bottom-info">
+                  <h2 class="engine-inner__bottom-title section-title base-title">Закупка у Заказчика</h2>
+                  <p class="engine-inner__bottom-text base-par">
+                    С другой стороны дальнейшее развитие различных 
+                    форм деятельности позволяет оценить значение 
+                    новых предложений. Товарищи! консультация с 
+                    широким активом играет важную роль в формировании 
+                    соответствующий условий активизации. “<br>
+                    <br>
+                    Идейные соображения высшего порядка, а 
+                    также новая модель организационной деятельности 
+                    влечет за собой процесс внедрения и модернизации 
+                    дальнейших направлений развития. Повседневная 
+                    практика показывает, что постоянный 
+                    количественный рост и сфера нашей.
+                  </p>
+                  <span class="engine-inner__bottom-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__bottom-image base-figure">
+                  <img class="engine-inner__bottom-img" src="img/image/design/engine-tabs-bottom-2.png" alt="Фото грузчиков">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__service-info">
+              <div class="engine-inner__service-container base-container">
+                <h2 class="engine-inner__service-title section-title base-title">Краткая информация об услуге</h2>
+                <p class="engine-inner__service-text base-par">
+                  Текст для СЕО.С другой стороны дальнейшее развитие 
+                  различных форм деятельности позволяет оценить значение 
+                  новых предложений. Товарищи! консультация с широким активом 
+                  играет важную роль в формировании соответствующий условий активизации.<br>
+                  <br>
+                  Идейные соображения высшего порядка, а также новая модель организационной 
+                  деятельности влечет за собой процесс внедрения и модернизации дальнейших 
+                  направлений развития. Повседневная практика показывает, что постоянный 
+                  количественный рост и сфера нашей.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="engine-tabs__item" id="main-engine-tabs-3">
+          <section class="engine-inner">
+            <div class="engine-inner__top">
+              <div class="engine-inner__top-container base-container">
+                <div class="engine-inner__top-info">
+                  <h2 class="engine-inner__top-title section-title base-title">Lorem ipsum dolor sit.</h2>
+                  <p class="engine-inner__top-text base-par">
+                    Lorem ipsum dolor sit, a
+                    met consectetur adipisicing 
+                    elit. Modi impedit facilis 
+                    aspernatur placeat ipsa cupiditate 
+                    eveniet voluptate, corporis 
+                    iure expedita unde similique, quam fuga 
+                    voluptates consequatur optio pariatur 
+                    autem amet.
+                    Lorem ipsum dolor sit, a
+                    met consectetur adipisicing 
+                    elit. Modi impedit facilis 
+                    aspernatur placeat ipsa cupiditate 
+                    eveniet voluptate, corporis 
+                    iure expedita unde similique, quam fuga 
+                    voluptates consequatur optio pariatur 
+                    autem amet.
+                  </p>
+                  <span class="engine-inner__top-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__top-image base-figure">
+                  <img class="engine-inner__top-img" src="img/image/design/engine-tabs-top-2.png" alt="Фото автомобиля и завода">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__middle">
+              <div class="engine-inner__middle-container base-container">
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--1 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-1.png" alt="">
+                </figure>
+                <div class="engine-inner__middle-info engine-inner__middle-item engine-inner__middle-item--2">
+                  <h2 class="engine-inner__middle-title section-title base-title">Lorem, ipsum dolor.</h2>
+                  <p class="engine-inner__middle-text base-par">
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Similique, iste libero 
+                    excepturi aut deleniti vitae ullam expedita 
+                    deserunt tenetur corrupti eos dolorem, 
+                    rem possimus! Amet nulla commodi dicta tempore magni.
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Similique, iste libero 
+                    excepturi aut deleniti vitae ullam expedita 
+                    deserunt tenetur corrupti eos dolorem, 
+                    rem possimus! Amet nulla commodi dicta tempore magni.
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Similique, iste libero 
+                    excepturi aut deleniti vitae ullam expedita 
+                    deserunt tenetur corrupti eos dolorem, 
+                    rem possimus! Amet nulla commodi dicta tempore magni.
+                  </p>
+                  <span class="engine-inner__middle-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--3 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-2.png" alt="">
+                </figure>
+                <figure class="engine-inner__middle-image engine-inner__middle-item engine-inner__middle-item--4 base-figure">
+                  <img class="engine-inner__middle-img" src="img/image/design/engine-tabs-middle-2-3.png" alt="">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__bottom">
+              <div class="engine-inner__bottom-container base-container">
+                <div class="engine-inner__bottom-info">
+                  <h2 class="engine-inner__bottom-title section-title base-title">Lorem ipsum dolor sit amet.</h2>
+                  <p class="engine-inner__bottom-text base-par">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Tempore aliquid velit eum id incidunt fuga 
+                    voluptatibus odit perspiciatis blanditiis expedita. 
+                    Quidem perferendis facere id, qui, obcaecati rem 
+                    illum asperiores necessitatibus veritatis porro 
+                    inventore! Fugiat ipsa ut sequi dolores neque 
+                    officiis nulla vel sed ipsam. Debitis possimus 
+                    laudantium numquam, harum vitae consectetur, 
+                    reiciendis expedita suscipit quisquam totam dolorum 
+                    blanditiis, ad enim.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Tempore aliquid velit eum id incidunt fuga 
+                    voluptatibus odit perspiciatis blanditiis expedita. 
+                    Quidem perferendis facere id, qui, obcaecati rem 
+                    illum asperiores necessitatibus veritatis porro 
+                    inventore! Fugiat ipsa ut sequi dolores neque 
+                    officiis nulla vel sed ipsam. Debitis possimus 
+                    laudantium numquam, harum vitae consectetur, 
+                    reiciendis expedita suscipit quisquam totam dolorum 
+                    blanditiis, ad enim.
+                  </p>
+                  <span class="engine-inner__bottom-number">Более 120 тыс. позиций</span>
+                  <button class="engine-inner__consult-button consult-modal-button base-button">
+                    <span class="engine-inner__consult-text">Заказать консультацию</span>
+                    <svg class="engine-inner__consult-icon" width="55" height="8">
+                      <use href="img/icon/sprite.svg#black-arrow-icon"></use>
+                    </svg>
+                  </button>
+                </div>
+                <figure class="engine-inner__bottom-image base-figure">
+                  <img class="engine-inner__bottom-img" src="img/image/design/engine-tabs-bottom-2.png" alt="Фото грузчиков">
+                </figure>
+              </div>
+            </div>
+            <div class="engine-inner__service-info">
+              <div class="engine-inner__service-container base-container">
+                <h2 class="engine-inner__service-title section-title base-title">Краткая информация об услуге</h2>
+                <p class="engine-inner__service-text base-par">
+                  Lorem ipsum dolor sit 
+                  amet consectetur adipisicing 
+                  elit. Mollitia soluta pariatur 
+                  iusto autem, culpa cupiditate porro 
+                  tenetur quia quidem repudiandae.
+                  Lorem ipsum dolor sit 
+                  amet consectetur adipisicing 
+                  elit. Mollitia soluta pariatur 
+                  iusto autem, culpa cupiditate porro 
+                  tenetur quia quidem repudiandae.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    @@include('components/bam-blocks/_projects.html')
+  </main>
+
+  @@include('components/base-blocks/_base-footer.html')
+
+  <script src="js/index.min.js"></script>
+</body>
+</html>
