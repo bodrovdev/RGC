@@ -25,13 +25,21 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    padding-bottom: 120px;
+    padding: 60px 0 120px 0;
 
     @include mixins.respond-to(mobileOnly) {
       padding: 20px 0 20px 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
+      padding: 20px 0 20px 0;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1599px) {
+    &__top, .engine-inner__bottom {
       padding: 20px 0 20px 0;
     }
   }
@@ -49,6 +57,14 @@
     @include mixins.respond-to(tabletOnly) {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1599px) {
+    &__top-container, .engine-inner__bottom-container {
+      align-items: center;
     }
   }
 
