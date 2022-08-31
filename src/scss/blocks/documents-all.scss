@@ -1,0 +1,214 @@
+@use "../mixins";
+
+.documents-all {
+  margin: 90px 0 90px 0;
+
+  @include mixins.respond-to(mobileOnly) {
+    margin: 60px 0 60px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(3, auto);
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-gap: 45px 22px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: var(--color-vista-white);
+    box-shadow: 6px 10px 30px rgba(0, 0, 0, 0.02);
+    border-radius: 20px;
+    overflow: hidden;
+
+    padding: 45px 30px 38px 35px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+
+      margin-right: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      padding: 20px 10px 20px 10px;
+    }
+  }
+
+  &__item-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // align-self: flex-end;
+
+    // width: 140px;
+    // height: 110px;
+
+    filter: drop-shadow(-12px 8px 50px rgba(0, 0, 0, 0.2));
+
+    margin-bottom: 30px;
+    margin-left: auto;
+  }
+
+  &__item-img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s;
+    }
+  }
+
+  &__item-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--color-emperor);
+
+    margin-bottom: 22px;
+  }
+
+  &__item-graphic {
+    width: 100px;
+    height: 4px;
+
+    background: linear-gradient(90deg, rgba(246,187,26,1) 0%, rgba(255,220,94,1) 37%, rgba(251,248,246,1) 100%);
+
+    margin-bottom: 22px;
+  }
+
+  &__item-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--color-emperor);
+
+    margin-bottom: 20px;
+  }
+
+  &__item-underline {
+    display: flex;
+
+    width: 100%;
+
+    margin-top: auto;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__item-price {
+    position: relative;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: var(--color-emperor);
+
+    padding-left: 34px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 23px;
+      height: 23px;
+      background: url('../img/image/design/documents-money.svg');
+      background-size: 23px 23px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      margin: 0;
+    }
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 162px;
+    height: 50px;
+    background: linear-gradient(160.58deg, #FFDC5E 15.73%, #F6BB1A 88.93%);
+    border-radius: 70px;
+    
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 0 5px var(--color-pomegranate);
+
+      transition: all 0.3s;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 5px var(--color-orange-roughy);
+
+      transition: all 0.3s;
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
+    }
+  }
+
+  &__buy-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-mine-shaft);
+
+    margin-right: 7px;
+  }
+}

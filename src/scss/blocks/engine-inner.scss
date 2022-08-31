@@ -279,6 +279,7 @@
   &__top-img, .engine-inner__bottom-img {
     border-radius: 20px;
     object-fit: cover;
+    user-select: none;
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
@@ -298,6 +299,7 @@
   &__middle-img {
     border-radius: 20px;
     object-fit: cover;
+    user-select: none;
     
     @include mixins.respond-to(mobileOnly) {
       width: 100%;

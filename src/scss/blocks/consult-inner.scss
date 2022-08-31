@@ -134,6 +134,7 @@
   &__item-img {
     border-radius: 20px;
     object-fit: cover;
+    user-select: none;
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
