@@ -22,7 +22,6 @@ const heading_slider = new Swiper('.heading__slider', {
 }); 
 
 //Слайдер из блока reviews
-
 const reviews_slider = new Swiper('.reviews__slider', {
   direction: 'horizontal',
   slidesPerView: 3,
@@ -45,7 +44,6 @@ const reviews_slider = new Swiper('.reviews__slider', {
 }); 
 
 //Слайдер из блока projects
-
 const projects_slider = new Swiper('.projects__slider', {
   direction: 'horizontal',
   slidesPerView: 3,
@@ -68,7 +66,6 @@ const projects_slider = new Swiper('.projects__slider', {
 }); 
 
 //Слайдер из блока clients
-
 const clients_slider = new Swiper('.clients__slider', {
   direction: 'horizontal',
   slidesPerView: 3,
@@ -95,7 +92,6 @@ const clients_slider = new Swiper('.clients__slider', {
 }); 
 
 //Слайдер из блока certis
-
 const certis_slider = new Swiper('.certis__slider', {
   direction: 'horizontal',
   slidesPerView: 3,
@@ -116,3 +112,13 @@ const certis_slider = new Swiper('.certis__slider', {
     prevEl: '.certis__slider-button--prev',
   },
 }); 
+
+//Слайдер из блока contacts
+const contacts_slider = new Swiper('.contacts__info-slider', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+
+  pagination: {
+    el: ".contacts__slider-pagination",
+  },
+});

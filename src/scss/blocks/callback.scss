@@ -331,6 +331,14 @@
     }
   }
 
+  @media only screen
+  and (min-device-width: 1800px)
+  and (max-device-width: 1900px) { 
+    &__img {
+      width: 600px;
+    }
+}
+
   &__img-overlay {
     position: absolute;
     top: 0;

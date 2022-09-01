@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/base-blocks/_base-head.html', {
+"title": "RGC - наши контакты"
+})
+<body>
+  @@include('components/bam-blocks/_success-modal.html')
+
+	@@include('components/bam-blocks/_consult-modal.html')
+
+  @@include('components/bam-blocks/_reviews-modal.html')
+
+  @@include('components/base-blocks/_base-header.html', {
+    "current-page": "наши контакты"
+})
+  <style>
+    .main-heading {
+      background: url('img/image/design/contacts-heading-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+<main class="page-content">
+  <section class="contacts">
+    <div class="contacts__address">
+      <div class="contacts__address-container base-container">
+        <div class="contacts__address-column">
+          <h2 class="contacts__address-title section-title page-title base-title">Контакты</h2>
+          <h3 class="contacts__address-city contacts__subject-title base-title">Москва</h3>
+          <div class="contacts__address-desc">
+            <span class="contacts__address-location contacts__address-item">
+              105066, Россия, г. Москва, муниципальный 
+              округ басманный вн.тер.г., Доброслободская 
+              ул., д. 7/1, стр. 3
+            </span>
+            <span class="contacts__address-timing contacts__address-item">
+              <span class="contacts__address-fat">Режим работы:</span>
+              ежедневно с 9:00 до 21:00</span>
+            <span class="contacts__address-phone contacts__address-item">
+              <span class="contacts__address-fat">Телефон для записи:</span>
+              <a class="contacts__phone-number base-link" href="">+7 916 389 93 99</a>
+            </span>
+            <span class="contacts__address-email contacts__address-item">
+              <span class="contacts__address-fat">Email:</span>
+              <a class="contacts__email-link base-link" href="">info@grouprgs.ru</a>
+            </span>
+          </div>
+        </div>
+        <div class="contacts__address-map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ada3e19fd59d53f6c8c367027c7cfc2e0f7c5f28c1b573d223a0d9a9d68df5e33&amp;source=constructor" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__info">
+      <div class="contacts__info-container base-container">
+        <div class="contacts__info-column">
+          <h3 class="contacts__info-organisation contacts__subject-title base-title">ООО «Роял Групп Консалтинг»</h3>
+          <ul class="contacts__info-list base-list">
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">ИНН / КПП</span>
+              <span class="contacts__info-text">9701188195 / 770101001</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">ОГРН</span>
+              <span class="contacts__info-text">1217700520894</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">Ген. директор</span>
+              <span class="contacts__info-text">Лагуткин Дмитрий Алексеевич</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">Банк</span>
+              <span class="contacts__info-text">В ПАО Сбербанк</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">Расчётный счёт / БИК</span>
+              <span class="contacts__info-text">40702810238000277945 / 044525225</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__slider-container">
+          <div class="contacts__slider-heading">
+            <h3 class="contacts__slider-title base-title">Наш офис</h3>
+            <div class="contacts__slider-navigation">
+              <div class="contacts__slider-pagination swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="contacts__info-slider swiper">
+            <div class="contacts__slider-wrapper swiper-wrapper">
+              <figure class="contacts__slider-item swiper-slide base-figure">
+                <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
+              </figure>
+              <figure class="contacts__slider-item swiper-slide base-figure">
+                <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('components/base-blocks/_base-footer.html')
+
+<script src="js/index.min.js"></script>
+</body>
+</html>

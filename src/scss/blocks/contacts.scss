@@ -1,0 +1,354 @@
+@use "../mixins";
+
+.contacts {
+
+  &__address {
+    margin: 100px 0 85px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 60px 0 60px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 60px 0 60px 0;
+    }
+  }
+
+  &__address-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding-left: 40px;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+
+      padding: 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+
+      padding: 0;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1287px) {
+    &__address-column {
+      margin-right: 30px;
+    }
+  }
+
+  &__address-title {
+    margin-bottom: 30px;
+  }
+
+  &__subject-title {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+    color: var(--color-mine-shaft);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 18px
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 18px
+    }
+  }
+
+  &__address-city {
+    margin-bottom: 30px;
+  }
+
+  &__address-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__address-item {
+    display: inline-block;
+
+    max-width: 400px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--color-mine-shaft);
+
+    padding-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  &__address-fat {
+    font-weight: 700;
+  }
+
+  &__address-location, .contacts__address-timing {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+  }
+
+  &__address-location {
+    &::before {
+      width: 15px;
+      height: 22px;
+      background: url("../../img/image/design/pointer.svg");
+      background-size: 15px 22px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__address-timing {
+    &::before {
+      width: 17px;
+      height: 17px;
+      background: url("../../img/image/design/time.svg");
+      background-size: 17px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__address-map {
+    width: 680px;
+    height: 385px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      height: auto;
+    }
+    
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1287px) {
+    &__address-map {
+      width: 650px;
+    }
+  }
+
+  &__address-map iframe {
+    width: 680px;
+    height: 385px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1287px) {
+    &__address-map iframe {
+      width: 650px;
+    }
+  }
+
+  &__info {
+    padding-bottom: 100px;
+    margin-left: 40px;
+
+    @include mixins.respond-to(mobileOnly) {
+      padding-bottom: 60px;
+      margin: 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      padding-bottom: 60px;
+      margin: 0;
+    }
+  }
+
+  &__info-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1287px) {
+    &__info-column {
+      margin-right: 30px;
+    }
+  }
+
+  &__info-organisation {
+    margin-bottom: 20px;
+  }
+
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 30px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__info-subtitle {
+    font-family: var(--font-family-footer);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-mine-shaft);
+
+    margin-bottom: 5px;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 16px;
+    }
+  }
+
+  &__info-text {
+    font-family: var(--font-family-footer);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--color-emperor);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+    }
+    
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 16px;
+    }
+  }
+
+  &__slider-container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 670px;
+
+    @include mixins.respond-to(mobileOnly) {
+      max-width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      max-width: 100%;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1287px) {
+    &__slider-container {
+      max-width: 640px;
+    }
+  }
+
+  &__slider-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__slider-title {
+    font-family: var(--font-family-footer);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: var(--color-mine-shaft);
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__slider-navigation {
+    position: relative;
+
+    width: 170px;
+    height: 20px;
+
+    & .swiper-pagination-bullet {
+
+    } 
+
+    & .swiper-pagination-bullet-active {
+      
+    } 
+  }
+
+  &__info-slider {
+    margin: 0;
+  }
+
+  &__slider-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
