@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#000000">
+	<link rel="manifest" href="manifest.webmanifest">
+	
+	<link href="css/style.min.css" rel="stylesheet">
+	<title>RGC - наши контакты</title>
+</head>
+<body>
+  <section class="success-modal" id="success-modal">
+  <div class="success-modal__wrapper">
+    <button class="success-modal__close-button base-button" id="success-modal-close">
+      <div class="success-modal__close-inner"></div>
+    </button>
+    <div class="success-modal__success">
+      <h2 class="success-modal__success-title base-title">Спасибо за обращение!</h2>
+      <p class="consult__success-text base-par">
+        Ваша заявка принята.
+      </p>
+    </div>
+  </div>
+</section>
+
+	<section class="consult-modal" id="consult-modal">
+  <div class="consult-modal__wrapper">
+    <button class="consult-modal__close-button base-button" id="consult-modal-close">
+      <div class="consult-modal__close-inner"></div>
+    </button>
+    <div class="consult-modal__inner" id="consult-modal-main">
+      <h2 class="consult-modal__title base-title">Заказать консультацию</h2>
+      <form class="consult-modal__form" method="post" id="consult-modal-form">
+        <input class="consult-modal__input" type="text" placeholder="Ваше имя" required>
+        <input class="consult-modal__input" type="tel" placeholder="Телефон" required>
+        <input class="consult-modal__input" type="email" placeholder="Email">
+        <button class="consult-modal__submit base-button">
+          <span class="consult-modal__submit-text">Отправить</span>
+          <svg class="consult-modal__icon" width="20" height="15" alt="">
+            <use href="img/icon/sprite.svg#white-arrow-icon"></use>
+          </svg>
+        </button>
+      </form>
+      <p class="consult-modal__datacheck base-par">
+        Нажимая на кнопку отправить, вы подтверждаете 
+        свое согласие на обработку 
+        пользовательских данных
+      </p>
+    </div>
+    <div class="consult-modal__success" id="consult-modal-success">
+      <h2 class="consult-modal__success-title base-title">Спасибо за обращение!</h2>
+      <p class="consult__success-text base-par">
+        Ваша заявка принята.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section class="reviews-modal" id="reviews-modal">
+  <div class="reviews-modal__wrapper">
+    <button class="reviews-modal__close-button base-button" id="reviews-modal-close">
+      <div class="reviews-modal__close-inner"></div>
+    </button>
+    <div class="reviews-modal__inner" id="reviews-modal-main">
+      <h2 class="reviews-modal__title base-title">Оставить отзыв</h2>
+      <form class="reviews-modal__form" id="reviews-modal-form"r>
+        <div class="reviews-modal__form-inner">
+          <div class="reviews-modal__form-column">
+            <input class="reviews-modal__form-input" type="text" placeholder="ФИО" required>
+            <input class="reviews-modal__form-input" type="email" placeholder="Email" required>
+            <input class="reviews-modal__form-input" type="text" placeholder="Организация" required>
+            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1" required>
+            <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить фото</button>
+          </div>
+          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв" required></textarea>
+        </div>
+        <div class="reviews-modal__form-underline">
+          <span class="reviews-modal__form-desc">
+            Нажимая на кнопку отправить, вы подтверждаете 
+            свое согласие на обработку пользовательских данных
+          </span>
+          <button class="reviews-modal__form-submit base-button" type="submit">
+            <span class="reviews-modal__submit-text">Отправить</span>
+            <svg class="reviews-modal__submit-icon" width="18" height="15" alt="">
+              <use href="img/icon/sprite.svg#white-arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="reviews-modal__success" id="reviews-modal-success">
+      <h2 class="reviews-modal__success-title base-title">Спасибо, ваш отзыв отправлен!</h2>
+      <p class="reviews__success-text base-par">
+        После проверки модератором,<br>
+        отзыв появится в общей ленте.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <header class="page-header">
+  <nav class="main-nav">
+    <div class="main-nav__container base-container">
+      <a class="main-nav__main-link base-link" href="index.html">
+        <figure class="main-nav__logo-block base-figure">
+          <img class="main-nav__logo-img" src="img/image/design/logo.svg" width="114" height="47" alt="Логотип">
+        </figure>
+      </a>
+      <div class="main-nav__mobile-menu" id="nav-mobile-menu">
+        <div class="main-nav__mobile-inner">
+          <ul class="main-nav__nav-list base-list">
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link base-link" href="about.html">О компании</a>
+            </li>
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link base-link" href="engineering.html">Инжиниринговые услуги</a>
+            </li>
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link base-link" href="consulting.html">Консалтинговые услуги</a>
+            </li>
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link base-link" href="documents.html">Готовые документы</a>
+            </li>
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link base-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <a class="main-nav__tel-link base-link" href="tel:+79163899399">
+            <svg class="main-nav__tel-icon" width="15" height="15" alt="">
+              <use href="img/icon/sprite.svg#tel-icon"></use>
+            </svg>
+            <span class="main-nav__tel-text">+7 916 389 93 99</span>
+          </a>
+        </div>
+      </div>
+      <button class="main-nav__burger base-button" type="button" id="nav-burger">
+        <span class="main-nav__burger-line"></span>
+      </button>
+    </div>
+  </nav>
+  <section class="main-heading">
+    <div class="main-heading__container base-container">
+      <div class="main-heading__overlay"></div>
+      <div class="main-heading__page-info">
+        <div class="main-heading__breadcrumbs">
+          <a class="main-heading__main-page main-heading__breadcrumbs-link base-link" href="index.html">Главная</a><span> — </span>
+          <a class="main-heading__current-page main-heading__breadcrumbs-link base-link" href="#">наши контакты</a>
+        </div>
+        <h1 class="main-heading__page-title base-title">наши контакты</h1>
+      </div>
+      <div class="features">
+        <div class="features__item">
+          <div class="features__graphic">
+            <div class="features__graphic-line"></div>
+            <div class="features__graphic-line"></div>
+          </div>
+          <div class="features__item-info">
+            <span class="features__item-title">12 лет</span>
+            <span class="features__item-desc">в сфере управления<br> проектами</span>
+          </div>
+        </div>
+        <div class="features__item">
+          <div class="features__graphic">
+            <div class="features__graphic-line"></div>
+            <div class="features__graphic-line"></div>
+          </div>
+          <div class="features__item-info">
+            <span class="features__item-title">30 +</span>
+            <span class="features__item-desc">реализованных<br> проектов</span>
+          </div>
+        </div>
+        <div class="features__item">
+          <div class="features__graphic">
+            <div class="features__graphic-line"></div>
+            <div class="features__graphic-line"></div>
+          </div>
+          <div class="features__item-info">
+            <span class="features__item-title">до 40%</span>
+            <span class="features__item-desc">экономия времени<br> клиента</span>
+          </div>
+        </div>
+        <div class="features__item">
+          <div class="features__graphic">
+            <div class="features__graphic-line"></div>
+            <div class="features__graphic-line"></div>
+          </div>
+          <div class="features__item-info">
+            <span class="features__item-title">975</span>
+            <span class="features__item-desc">обращений к нам за<br> консультацией</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+  <style>
+    .main-heading {
+      background: url('img/image/design/contacts-heading-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+<main class="page-content">
+  <section class="contacts">
+    <div class="contacts__address">
+      <div class="contacts__address-container base-container">
+        <div class="contacts__address-column">
+          <h2 class="contacts__address-title section-title page-title base-title">Контакты</h2>
+          <h3 class="contacts__address-city contacts__subject-title base-title">Москва</h3>
+          <div class="contacts__address-desc">
+            <span class="contacts__address-location contacts__address-item">
+              105066, Россия, г. Москва, муниципальный 
+              округ басманный вн.тер.г., Доброслободская 
+              ул., д. 7/1, стр. 3
+            </span>
+            <span class="contacts__address-timing contacts__address-item">
+              <span class="contacts__address-fat">Режим работы:</span>
+              ежедневно с 9:00 до 21:00</span>
+            <span class="contacts__address-phone contacts__address-item">
+              <span class="contacts__address-fat">Телефон для записи:</span>
+              <a class="contacts__phone-number base-link" href="">+7 916 389 93 99</a>
+            </span>
+            <span class="contacts__address-email contacts__address-item">
+              <span class="contacts__address-fat">Email:</span>
+              <a class="contacts__email-link base-link" href="">info@grouprgs.ru</a>
+            </span>
+          </div>
+        </div>
+        <div class="contacts__address-map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ada3e19fd59d53f6c8c367027c7cfc2e0f7c5f28c1b573d223a0d9a9d68df5e33&amp;source=constructor" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__info">
+      <div class="contacts__info-container base-container">
+        <div class="contacts__info-column">
+          <h3 class="contacts__info-organisation contacts__subject-title base-title">ООО «Роял Групп Консалтинг»</h3>
+          <ul class="contacts__info-list base-list">
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">ИНН / КПП</span>
+              <span class="contacts__info-text">9701188195 / 770101001</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">ОГРН</span>
+              <span class="contacts__info-text">1217700520894</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">Ген. директор</span>
+              <span class="contacts__info-text">Лагуткин Дмитрий Алексеевич</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">Банк</span>
+              <span class="contacts__info-text">В ПАО Сбербанк</span>
+            </li>
+            <li class="contacts__info-item">
+              <span class="contacts__info-subtitle">Расчётный счёт / БИК</span>
+              <span class="contacts__info-text">40702810238000277945 / 044525225</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__slider-container">
+          <div class="contacts__slider-heading">
+            <h3 class="contacts__slider-title base-title">Наш офис</h3>
+            <div class="contacts__slider-navigation">
+              <div class="contacts__slider-pagination swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="contacts__info-slider swiper">
+            <div class="contacts__slider-wrapper swiper-wrapper">
+              <figure class="contacts__slider-item swiper-slide base-figure">
+                <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
+              </figure>
+              <figure class="contacts__slider-item swiper-slide base-figure">
+                <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <section class="footer-feedback">
+    <div class="footer-feedback__container base-container">
+      <div class="footer-feedback__info">
+        <span class="footer-feedback__question">Остались вопросы</span>
+        <span class="footer-feedback__answer">Запишись на быструю консультацию	</span>
+        <span class="footer-feedback__text">
+          Для того чтобы мы могли связаться с вами, 
+          заполните свои контактные данные
+        </span>
+      </div>
+      <form class="footer-feedback__form" method="post" id="success-modal-form">
+        <div class="footer-feedback__form-fields">
+          <div class="footer-feedback__form-column">
+            <input type="tel" class="footer-feedback__form-input" placeholder="Телефон" required>
+            <input type="email" class="footer-feedback__form-input" placeholder="E-mail">
+            <input type="text" class="footer-feedback__form-input" placeholder="Ваше имя" required>
+          </div>
+          <div class="footer-feedback__form-column">
+            <textarea class="footer-feedback__form-textarea" placeholder="Напишите свой&#10;вопрос"></textarea>
+          </div>
+        </div>
+        <div class="footer-feedback__form-bottomline">
+          <span class="footer-feedback__form-desc">
+            нажимая на кнопку отправить, вы подтверждаете свое согласие на обработку пользовательских данных
+          </span>
+          <button class="footer-feedback__form-submit base-button" type="submit">
+            <span class="footer-feedback__submit-text">Отправить</span>
+            <svg class="footer-feedback__submit-icon" width="18" height="15" alt="">
+              <use href="img/icon/sprite.svg#white-arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="footer-main">
+    <div class="footer-main__container">
+      <div class="footer-main__column">
+        <figure class="footer-main__logo-block base-figure">
+          <img class="footer-main__logo-img" src="img/image/design/logo.svg" width="170" height="70" alt="Логотип">
+        </figure>
+        <button class="footer-main__info-button consult-modal-button base-button" type="button">Заказать консультацию</button>
+      </div>
+      <div class="footer-main__bread-block">
+        <div class="footer-main__engine-bread">
+          <span class="footer-main__bread-title">Инжиниринговые услуги:</span>
+          <ul class="footer-main__bread-list base-list">
+            <li class="footer-main__bread-item">
+              <a class="footer-main__bread-link base-link" href="engineering.html#main-engine-tabs-1">Управление объектами</a>
+            </li>
+            <li class="footer-main__bread-item">
+              <a class="footer-main__bread-link base-link" href="engineering.html#main-engine-tabs-2">Управление поставками</a>
+            </li>
+            <li class="footer-main__bread-item">
+              <a class="footer-main__bread-link base-link" href="engineering.html#main-engine-tabs-3">Управление логистикой</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-main__consult-bread">
+          <span class="footer-main__bread-title">Консалтинговые услуги:</span>
+          <ul class="footer-main__bread-list base-list">
+            <li class="footer-main__bread-item">
+              <a class="footer-main__bread-link base-link" href="#">Управленческие услуги</a>
+            </li>
+            <li class="footer-main__bread-item">
+              <a class="footer-main__bread-link base-link" href="#">HR-услуги</a>
+            </li>
+            <li class="footer-main__bread-item">
+              <a class="footer-main__bread-link base-link" href="#">Проектные услуги</a>
+            </li>
+            <li class="footer-main__bread-item">
+              <a class="footer-main__bread-link base-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-main__contacts">
+        <span class="footer-main__contacts-address">
+          105066, Россия, г. Москва, муниципальный округ 
+          басманный вн.тер.г., Доброслободская ул., д. 7/1, стр. 3
+        </span>
+        <span class="footer-main__contacts-timing"><b>Режим работы</b>: ежедневно с 9:00 до 21:00</span>
+        <ul class="footer-main__contacts-socials base-list">
+          <li class="footer-main__socials-item">
+            <a class="footer-main__socials-link footer-main__email-link base-link" href="mailto: info@mail.ru">info@mail.ru</a>
+          </li>
+          <li class="footer-main__socials-item">
+            <a class="footer-main__socials-link footer-main__tel-link base-link" href="tel: +79163899399">+7 (916) 389-93-99</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="footer-underline">
+    <div class="footer-underline__container">
+      <a class="footer-underline__policy-link base-link" href="#">Политика конфиденциальности</a>
+      <span class="footer-underline__copyright">© Copyright 2022</span>
+      <a class="footer-underline__credits-link base-link" href="https://is-art.ru" target="_blank"
+        rel="noopener noreferrer">
+        <span class="footer-underline__credits-caption">Разработано</span>
+        <svg class="footer-underline__credits-icon" width="44" height="19">
+          <use href="img/icon/sprite.svg#isart-logo-icon"></use>
+        </svg>
+      </a>
+    </div>
+  </section>
+</footer>
+
+<script src="js/index.min.js"></script>
+</body>
+</html>
