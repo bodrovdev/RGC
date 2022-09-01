@@ -94,6 +94,14 @@
     }
   }
 
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1439px) {
+    &__button {
+      width: 100%;
+    }
+  }
+
   &__button-img {
     position: absolute;
     top: 0;
@@ -158,15 +166,15 @@
     }
   }
 
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1599px) {
-    &__button-info {
-      align-items: center;
+  // @media only screen
+  // and (min-device-width: 1024px)
+  // and (max-device-width: 1288px) {
+  //   &__button-info {
+  //     align-items: center;
 
-      text-align: center;
-    }
-  }
+  //     text-align: center;
+  //   }
+  // }
 
   &__button-title {
     font-weight: 700;
