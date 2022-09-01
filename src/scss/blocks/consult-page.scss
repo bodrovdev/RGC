@@ -7,7 +7,7 @@
     margin-bottom: 90px;
 
     @include mixins.respond-to(mobileOnly) {
-      
+      margin-bottom: 60px;
     }
   }
 

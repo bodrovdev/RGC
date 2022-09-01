@@ -1,0 +1,182 @@
+@use "../mixins";
+
+.documents-content {
+  display: flex;
+  flex-direction: column;
+
+  &__guide {
+    margin-bottom: 90px;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__guide-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__guide-title {
+    margin-bottom: 20px;
+  }
+
+  &__guide-text {
+    display: inline-block;
+
+    font-family: var(--font-family-footer);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-black);
+
+    @include mixins.respond-to(mobileOnly) {
+      max-width: 100%;
+    }
+
+    @include mixins.respond-to(tablet) {
+      max-width: 100%;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      max-width: calc(100% - 140px);
+    }
+  }
+
+  &__features {
+    background: url(../img/image/design/engine-tabs-blocks-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 67px 0 105px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      padding: 20px 0 50px 0;
+    }
+  }
+
+  &__features-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__features-title {
+    margin-bottom: 60px;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__features-body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      align-items: flex-start;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1287px) {
+    &__features-body {
+      align-items: flex-start;
+    }
+  }
+
+  &__features-column {
+    order: 1;
+
+    @include mixins.respond-to(mobileOnly) {
+      order: 2;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin-right: 20px;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1287px) {
+    &__features-column {
+      margin-right: 20px;
+    }
+  }
+
+  &__features-list {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 90px;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__features-item {
+    position: relative;
+
+    display: inline-block;
+
+    border-bottom: 1px solid var(--color-gray);
+
+    padding: 0 0 20px 35px;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      border: none;
+
+      padding: 0 0 0 35px;
+      margin: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 25px;
+      height: 25px;
+      background: url("../img/image/design/check.svg");
+      background-size: 25px 25px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__consult-button {
+    width: 306px;
+  }
+
+  &__features-graphic {
+    order: 2;
+
+    border-radius: 20px;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 20px;
+
+      order: 1;
+    }
+  }
+
+  &__features-img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+}
