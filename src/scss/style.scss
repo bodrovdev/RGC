@@ -59,6 +59,10 @@
 @use 'blocks/documents-all';
 @use 'blocks/documents-content';
 
+@use 'blocks/contacts';
+
+@use 'blocks/notfound';
+
 @use 'blocks/footer-main';
 @use 'blocks/footer-feedback';
-@use 'blocks/footer-underline';@use 'blocks/contacts';
+@use 'blocks/footer-underline';

@@ -111,6 +111,23 @@
     }
   }
 
+  &__main-link {
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+    
+    &:focus-visible .main-nav__logo-img {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
+    }
+  }
+
   &__logo-block {
     z-index: 5;
 

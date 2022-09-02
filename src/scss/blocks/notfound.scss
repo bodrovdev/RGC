@@ -1,0 +1,175 @@
+@use "../mixins";
+
+.notfound {
+
+  &__page-info {
+    padding-top: 187px;
+  }
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+
+      padding-bottom: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+
+      padding-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      flex-direction: column;
+
+      padding-bottom: 20px;
+    }
+    
+    @include mixins.respond-to(desktopD) {
+      flex-direction: row;
+
+      padding-bottom: 0;
+    }
+  }
+
+  &__img {
+
+    @include mixins.respond-to(mobileOnly) {
+      right: auto;
+
+      width: 100%;
+
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      right: auto;
+
+      width: 100%;
+
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      right: auto;
+
+      width: 100%;
+
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      position: relative;
+      right: -100px;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: 235px;
+    bottom: 130px; 
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 365px;
+
+    @include mixins.respond-to(mobileOnly) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+
+      align-items: center;
+      justify-content: center;
+
+      max-width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+
+      align-items: center;
+      justify-content: center;
+
+      max-width: 100%;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+
+      align-items: center;
+      justify-content: center;
+
+      max-width: 100%;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      position: absolute;
+      left: 235px;
+      bottom: 130px; 
+
+      align-items: initial;
+      justify-content: initial;
+  
+      max-width: 365px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-mine-shaft);
+
+    @include mixins.respond-to(mobileOnly) {
+      text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      text-align: left;
+
+      margin-bottom: 50px;
+    }
+  }
+
+  &__consult-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 280px;
+  }
+
+  &__consult-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-mine-shaft);
+
+    margin-right: 18px;
+  }
+}
