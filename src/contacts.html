@@ -4,11 +4,9 @@
 "title": "RGC - наши контакты"
 })
 <body>
-  @@include('components/bam-blocks/_success-modal.html')
+  @@include('components/bem-blocks/_success-modal.html')
 
-	@@include('components/bam-blocks/_consult-modal.html')
-
-  @@include('components/bam-blocks/_reviews-modal.html')
+	@@include('components/bem-blocks/_consult-modal.html')
 
   @@include('components/base-blocks/_base-header.html', {
     "current-page": "наши контакты"
@@ -44,7 +42,7 @@
             </span>
             <span class="contacts__address-email contacts__address-item">
               <span class="contacts__address-fat">Email:</span>
-              <a class="contacts__email-link base-link" href="mailto:info@grouprgs.ru">info@grouprgs.ru</a>
+              <a class="contacts__email-link base-link" href="mailto: info@grouprgs.ru">info@grouprgs.ru</a>
             </span>
           </div>
         </div>
@@ -84,11 +82,24 @@
           <div class="contacts__slider-heading">
             <h3 class="contacts__slider-title base-title">Наш офис</h3>
             <div class="contacts__slider-navigation">
-              <div class="contacts__slider-pagination swiper-pagination"></div>
+              <span class="contacts__slider-min" id="contacts-slider-min">01</span>
+              <div class="contacts__pagination-container">
+                <div class="contacts__slider-pagination swiper-pagination"></div>
+              </div>
+              <span class="contacts__slider-max" id="contacts-slider-max"></span>
             </div>
           </div>
           <div class="contacts__info-slider swiper">
             <div class="contacts__slider-wrapper swiper-wrapper">
+              <figure class="contacts__slider-item swiper-slide base-figure">
+                <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
+              </figure>
+              <figure class="contacts__slider-item swiper-slide base-figure">
+                <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
+              </figure>
+              <figure class="contacts__slider-item swiper-slide base-figure">
+                <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
+              </figure>
               <figure class="contacts__slider-item swiper-slide base-figure">
                 <img class="contacts__slider-img" src="img/image/content/contacts-slide-1.jpg" alt="">
               </figure>

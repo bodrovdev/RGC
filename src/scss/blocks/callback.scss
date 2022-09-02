@@ -175,7 +175,7 @@
     line-height: 24px;
     color: var(--color-black);
 
-    padding: 13px 0 12px 66px;
+    padding: 13px 10px 12px 66px;
 
     z-index: 5;
 
@@ -188,7 +188,7 @@
     }
 
     &:hover {
-      outline: 2px solid var(--color-mine-shaft);
+      box-shadow: 0 0 0 2px var(--color-mine-shaft);
     }
 
     &:focus {

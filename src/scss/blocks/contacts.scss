@@ -122,6 +122,17 @@
     }
   }
 
+  &__phone-number, .contacts__email-link {
+
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--color-buttercup);
+
+      transition: all 0.3s;
+    }
+  }
+
   &__address-map {
     width: 680px;
     height: 385px;
@@ -327,18 +338,32 @@
   }
 
   &__slider-navigation {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     width: 170px;
     height: 20px;
+  }
 
-    & .swiper-pagination-bullet {
+  &__pagination-container {
+    position: relative;
 
-    } 
+    width: 110px;
+    height: 100%;
 
-    & .swiper-pagination-bullet-active {
-      
-    } 
+    & .swiper-pagination-progressbar {
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+
+      width: 100% !important;
+      height: 2px !important;
+      background-color: var(--color-gray) !important;
+    }
+
+    & .swiper-pagination-progressbar-fill {
+      background-color: var(--color-mine-shaft) !important;
+    }
   }
 
   &__info-slider {

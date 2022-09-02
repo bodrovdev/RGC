@@ -4,6 +4,7 @@ import Swiper from 'swiper/bundle';
 const heading_slider = new Swiper('.heading__slider', {
 
   loop: true,
+  speed: 800,
 
   breakpoints: {
     320: {
@@ -111,7 +112,7 @@ const certis_slider = new Swiper('.certis__slider', {
     nextEl: '.certis__slider-button--next',
     prevEl: '.certis__slider-button--prev',
   },
-}); 
+});
 
 //Слайдер из блока contacts
 const contacts_slider = new Swiper('.contacts__info-slider', {
@@ -120,5 +121,22 @@ const contacts_slider = new Swiper('.contacts__info-slider', {
 
   pagination: {
     el: ".contacts__slider-pagination",
+    type: "progressbar",
   },
 });
+
+function contactsSliderMaxCount() {
+  let contactsSlides = document.querySelectorAll('.contacts__slider-item');
+  let contactsSlidesMax = document.getElementById('contacts-slider-max');
+
+  if (contactsSlides === null || contactsSlidesMax === null) {
+    return;
+  }
+  else {
+    contactsSlides.length < 10 ? 
+    contactsSlidesMax.textContent = `0${contactsSlides.length}` :
+    contactsSlidesMax.textContent = contactsSlides.length;
+  }
+}
+
+contactsSliderMaxCount();

@@ -340,13 +340,19 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+
+    @include mixins.respond-to(mobileOnly) {
+      line-height: 18px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      line-height: 18px;
+    }
   }
 
   &__contacts-socials {
     display: flex;
     flex-direction: column;
-
-    padding-left: 30px;
   }
 
   &__socials-item {

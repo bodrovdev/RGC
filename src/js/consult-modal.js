@@ -2,40 +2,40 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 //Открытие модального окна "заказать консультацию"
 
-let modal = document.getElementById('consult-modal');
-let modalOpen = document.querySelectorAll('.consult-modal-button');
-let modalClose = document.getElementById('consult-modal-close');
+let consultModal = document.getElementById('consult-modal');
+let consultModalOpen = document.querySelectorAll('.consult-modal-button');
+let consultModalClose = document.getElementById('consult-modal-close');
 
-modalOpen.forEach((element) => {
+consultModalOpen.forEach((element) => {
   element.addEventListener('click', () => {
-    modal.classList.add('consult-modal--opened');
-    disableBodyScroll(modal);
+    consultModal.classList.add('consult-modal--opened');
+    disableBodyScroll(consultModal);
   })
 })
 
-modalClose.addEventListener('click', () => {
-  modal.classList.remove('consult-modal--opened');
-  enableBodyScroll(modal);
+consultModalClose.addEventListener('click', () => {
+  consultModal.classList.remove('consult-modal--opened');
+  enableBodyScroll(consultModal);
 })
 
-modal.addEventListener('click', (e) => {
+consultModal.addEventListener('click', (e) => {
   if (e.target !== e.currentTarget) {
     return;
   }
   else {
-    modal.classList.remove('consult-modal--opened');
-    enableBodyScroll(modal);
+    consultModal.classList.remove('consult-modal--opened');
+    enableBodyScroll(consultModal);
   }
 })
 
 //Вывод сообщения об успешной отправки формы
 
-let modalMain = document.getElementById('consult-modal-main');
-let modalForm = document.getElementById('consult-modal-form');
-let modalSuccess = document.getElementById('consult-modal-success');
+let consultModalMain = document.getElementById('consult-modal-main');
+let consultModalForm = document.getElementById('consult-modal-form');
+let consultModalSuccess = document.getElementById('consult-modal-success');
 
-modalForm.addEventListener('submit', (e) => {
+consultModalForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  modalMain.classList.add('consult-modal__inner--hidden');
-  modalSuccess.classList.add('consult-modal__success--shown');
+  consultModalMain.classList.add('consult-modal__inner--hidden');
+  consultModalSuccess.classList.add('consult-modal__success--shown');
 })
