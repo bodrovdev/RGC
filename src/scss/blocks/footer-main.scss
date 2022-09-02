@@ -308,7 +308,7 @@
 
       width: 18px;
       height: 22px;
-      background: url('../../img/image/design/pointer.svg');
+      background: url('../img/image/design/pointer.svg');
       background-size: 18px 22px;
       background-position: center;
       background-repeat: no-repeat;
@@ -316,6 +316,8 @@
   }
 
   &__contacts-timing {
+    position: relative;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 14px;
@@ -323,6 +325,21 @@
 
     padding-left: 30px;
     margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      width: 17px;
+      height: 17px;
+      background: url('../img/image/design/time.svg');
+      background-size: 17px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 
   &__contacts-socials {
