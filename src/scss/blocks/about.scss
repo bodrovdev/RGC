@@ -6,7 +6,7 @@
 
   &__container {
     display: grid;
-    
+
     @include mixins.respond-to(mobileOnly) {
       grid-template: repeat(2, auto) / auto;
       grid-column-gap: 0;
@@ -160,12 +160,6 @@
       height: 329px;
     }
 
-    &:hover .about__graphic {
-      transform: scale(1.1);
-
-      transition: all 0.3s;
-    }
-
     &:focus-visible {
       outline: 5px solid var(--color-pomegranate);
       outline-offset: 5px;
@@ -176,17 +170,96 @@
 
   &__graphic {
     position: absolute;
-    top: -120px;
-    left: -120px;
+    top: 5px;
+    left: 5px;
 
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: var(--color-white);
 
     @include mixins.respond-to(mobileOnly) {
-      top: -50px;
-      left: -50px;
+      top: 50%;
+      left: 50%;
 
-      width: 150px;
-      height: 150px;
+      width: 50px;
+      height: 50px;
+
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &__graphic-icon {
+    fill: var(--color-buttercup);
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.5, 0.5);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(3, 3);
+      opacity: 0;
+    }
+  }
+
+  &__graphic-pulsing {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 350px;
+
+    margin: auto;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 95px;
+      height: 95px;
+    }
+  }
+
+  &__pulsing-ring {
+    position: absolute;
+
+    width: 132px;
+    height: 132px;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    opacity: 0;
+
+    -webkit-animation: pulse 3000ms ease-out infinite;
+    animation: pulse 3000ms ease-out infinite;
+
+    &:nth-of-type(2) {
+      animation-delay: 600ms;
+    }
+
+    &:nth-of-type(3) {
+      animation-delay: 1200ms;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 50%;
+      height: 50%;
     }
   }
 

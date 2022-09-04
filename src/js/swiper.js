@@ -10,7 +10,7 @@ const heading_slider = new Swiper('.heading__slider', {
     320: {
       direction: 'horizontal',
     },
-    
+
     1024: {
       direction: 'vertical',
     }
@@ -20,19 +20,18 @@ const heading_slider = new Swiper('.heading__slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
-}); 
+});
 
 //Слайдер из блока reviews
 const reviews_slider = new Swiper('.reviews__slider', {
   direction: 'horizontal',
-  slidesPerView: 3,
   spaceBetween: 25,
 
   breakpoints: {
     320: {
       slidesPerView: 1,
     },
-    
+
     1024: {
       slidesPerView: 3,
     }
@@ -42,19 +41,18 @@ const reviews_slider = new Swiper('.reviews__slider', {
     nextEl: '.reviews__slider-button--next',
     prevEl: '.reviews__slider-button--prev',
   },
-}); 
+});
 
 //Слайдер из блока projects
 const projects_slider = new Swiper('.projects__slider', {
   direction: 'horizontal',
-  slidesPerView: 3,
   spaceBetween: 25,
 
   breakpoints: {
     320: {
       slidesPerView: 1,
     },
-    
+
     1024: {
       slidesPerView: 3,
     }
@@ -64,12 +62,11 @@ const projects_slider = new Swiper('.projects__slider', {
     nextEl: '.projects__slider-button--next',
     prevEl: '.projects__slider-button--prev',
   },
-}); 
+});
 
 //Слайдер из блока clients
 const clients_slider = new Swiper('.clients__slider', {
   direction: 'horizontal',
-  slidesPerView: 3,
   spaceBetween: 25,
 
   breakpoints: {
@@ -80,7 +77,7 @@ const clients_slider = new Swiper('.clients__slider', {
     768: {
       slidesPerView: 2,
     },
-    
+
     1024: {
       slidesPerView: 4,
     }
@@ -90,19 +87,18 @@ const clients_slider = new Swiper('.clients__slider', {
     nextEl: '.clients__slider-button--next',
     prevEl: '.clients__slider-button--prev',
   },
-}); 
+});
 
 //Слайдер из блока certis
 const certis_slider = new Swiper('.certis__slider', {
   direction: 'horizontal',
-  slidesPerView: 3,
   spaceBetween: 25,
 
   breakpoints: {
     320: {
       slidesPerView: 1,
     },
-    
+
     1024: {
       slidesPerView: 3,
     }
@@ -119,24 +115,43 @@ const contacts_slider = new Swiper('.contacts__info-slider', {
   direction: 'horizontal',
   slidesPerView: 1,
 
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+
   pagination: {
     el: ".contacts__slider-pagination",
     type: "progressbar",
+    clickable: true,
   },
 });
 
-function contactsSliderMaxCount() {
-  let contactsSlides = document.querySelectorAll('.contacts__slider-item');
-  let contactsSlidesMax = document.getElementById('contacts-slider-max');
+const pageName = window.location.pathname.split('/')[1].split('.')[0];
+let contactsSlides = document.querySelectorAll('.contacts__slider-item');
+let contactsSlidesCurrent = document.getElementById('contacts-slider-current');
+let contactsSlidesMax = document.getElementById('contacts-slider-max');
 
-  if (contactsSlides === null || contactsSlidesMax === null) {
+function contactsSlider() {
+  if (pageName !== 'contacts') {
     return;
   }
   else {
-    contactsSlides.length < 10 ? 
-    contactsSlidesMax.textContent = `0${contactsSlides.length}` :
-    contactsSlidesMax.textContent = contactsSlides.length;
+    contactsSlidesCurrent.textContent = `0${contacts_slider.activeIndex + 1}`;
+
+    contactsSlides.length < 10 ?
+      contactsSlidesMax.textContent = `0${contactsSlides.length}` :
+      contactsSlidesMax.textContent = contactsSlides.length;
   }
 }
 
-contactsSliderMaxCount();
+contactsSlider();
+
+contacts_slider.on('activeIndexChange', () => {
+  if (contacts_slider.activeIndex < 9) {
+    contactsSlidesCurrent.textContent = `0${contacts_slider.activeIndex + 1}`;
+  }
+  else {
+    contactsSlidesCurrent.textContent = contacts_slider.activeIndex + 1
+  }
+})

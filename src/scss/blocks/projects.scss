@@ -67,7 +67,7 @@
     max-height: 471px;
     box-sizing: border-box;
     border-radius: 20px;
-    overflow: hidden;    
+    overflow: hidden;
     cursor: default;
 
     transition: 0.3s;
@@ -95,6 +95,18 @@
 
   &__item-glightbox {
     &:hover~.projects__item-overlay {
+      opacity: 1;
+
+      transition: all 0.3s;
+    }
+
+    &:focus-visible {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    &:focus-visible~.projects__item-overlay {
       opacity: 1;
 
       transition: all 0.3s;
@@ -194,7 +206,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+
     background-color: var(--color-black);
     border-radius: 0 0 20px 20px;
     user-select: none;
@@ -286,17 +298,17 @@
     transition: 0.3s;
   }
 
-  &__bottom-learnmore:hover .projects__learnmore-text{
-      color: var(--color-pomegranate);
+  &__bottom-learnmore:hover .projects__learnmore-text {
+    color: var(--color-pomegranate);
 
-      transition: all 0.3s;
+    transition: all 0.3s;
   }
 
   &__bottom-learnmore:hover .projects__learnmore-icon {
-      fill: var(--color-pomegranate);
+    fill: var(--color-pomegranate);
 
-      transition: all 0.3s;
-    }
+    transition: all 0.3s;
+  }
 
   &__item-desc {
     position: absolute;
@@ -310,7 +322,7 @@
     max-width: 410px;
     height: 471px;
     max-height: 471px;
-    background:rgb(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0, 0.7);
     border-radius: 20px;
     overflow-y: auto;
 
@@ -343,7 +355,7 @@
 
   &__item-desc--active {
     transform: translateY(-100%);
-    
+
     transition: all 0.2s;
   }
 

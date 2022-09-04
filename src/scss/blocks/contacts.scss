@@ -34,9 +34,7 @@
     }
   }
 
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1287px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1287px) {
     &__address-column {
       margin-right: 30px;
     }
@@ -89,7 +87,8 @@
     font-weight: 700;
   }
 
-  &__address-location, .contacts__address-timing {
+  &__address-location,
+  .contacts__address-timing {
     position: relative;
 
     &::before {
@@ -122,7 +121,8 @@
     }
   }
 
-  &__phone-number, .contacts__email-link {
+  &__phone-number,
+  .contacts__email-link {
 
     transition: 0.3s;
 
@@ -130,6 +130,13 @@
       color: var(--color-buttercup);
 
       transition: all 0.3s;
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
     }
   }
 
@@ -141,16 +148,14 @@
       width: 100%;
       height: auto;
     }
-    
+
     @include mixins.respond-to(tabletOnly) {
       width: 100%;
       height: 200px;
     }
   }
 
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1287px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1287px) {
     &__address-map {
       width: 650px;
     }
@@ -171,9 +176,7 @@
     }
   }
 
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1287px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1287px) {
     &__address-map iframe {
       width: 650px;
     }
@@ -210,9 +213,7 @@
     }
   }
 
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1287px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1287px) {
     &__info-column {
       margin-right: 30px;
     }
@@ -274,7 +275,7 @@
     @include mixins.respond-to(mobileOnly) {
       font-size: 16px;
     }
-    
+
     @include mixins.respond-to(tabletOnly) {
       font-size: 16px;
     }
@@ -295,9 +296,7 @@
     }
   }
 
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1287px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1287px) {
     &__slider-container {
       max-width: 640px;
     }

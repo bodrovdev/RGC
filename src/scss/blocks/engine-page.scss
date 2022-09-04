@@ -6,9 +6,7 @@
   &__buttons {
     margin-bottom: 90px;
 
-    @include mixins.respond-to(mobileOnly) {
-      
-    }
+    @include mixins.respond-to(mobileOnly) {}
   }
 
   &__buttons-container {
@@ -41,6 +39,8 @@
     overflow: hidden;
     cursor: pointer;
 
+    transition: all 0.3s;
+
     padding: 10px 10px 30px 10px;
 
     z-index: 1;
@@ -58,7 +58,7 @@
         margin: 0;
       }
     }
-    
+
     @include mixins.respond-to(tabletOnly) {
       align-items: center;
       justify-content: center;
@@ -87,16 +87,21 @@
       color: var(--color-tangaroa);
       transition: all 0.3s;
     }
-    
+
     &:hover .engine-tabs__learnmore-icon {
       fill: var(--color-tangaroa);
       transition: all 0.3s;
     }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-pomegranate);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
+    }
   }
 
-  @media only screen
-  and (min-device-width: 1024px)
-  and (max-device-width: 1439px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1439px) {
     &__button {
       width: 100%;
     }
@@ -166,17 +171,9 @@
     }
   }
 
-  // @media only screen
-  // and (min-device-width: 1024px)
-  // and (max-device-width: 1288px) {
-  //   &__button-info {
-  //     align-items: center;
-
-  //     text-align: center;
-  //   }
-  // }
-
   &__button-title {
+    user-select: none;
+
     font-weight: 700;
     font-size: 30px;
     line-height: 39px;
@@ -193,6 +190,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    user-select: none;
 
     transition: all 0.3s;
 
@@ -234,7 +233,7 @@
     transition: all 0.3s;
   }
 
-  &__button--active .engine-tabs__learnmore-icon{
+  &__button--active .engine-tabs__learnmore-icon {
     fill: var(--color-tangaroa);
     transition: all 0.3s;
   }
