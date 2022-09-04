@@ -1,8 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-
 //Мобильное меню
-
 let burger = document.getElementById('nav-burger');
 let mobileMenu = document.getElementById('nav-mobile-menu');
 
@@ -19,13 +17,12 @@ burger.addEventListener('click', () => {
 })
 
 //Табы в блоке engine на главной странице
-
 let engineTabsButtons = document.querySelectorAll('.engine__tabs-button');
 let engineTabsItems = document.querySelectorAll('.engine__tabs-itemset');
 
 engineTabsButtons.forEach((item) => {
   item.addEventListener('click', (e) => {
-    
+
     e.preventDefault();
     const id = e.target.getAttribute('href').replace('#', '');
 
@@ -42,7 +39,6 @@ engineTabsButtons.forEach((item) => {
 })
 
 //Табы в блоке consulting на главной странице
-
 let consultTabsButtons = document.querySelectorAll('.consulting__tabs-button');
 let consultTabsItems = document.querySelectorAll('.consulting__tabs-itemset');
 
@@ -65,7 +61,6 @@ consultTabsButtons.forEach((item) => {
 })
 
 //Сворачивание и разворачивание текста отзывов в блоке reviews
-
 let reviewsReadMore = document.querySelectorAll('.reviews__item-controller');
 let reviewsItemBody = document.querySelectorAll('.reviews__item-body');
 
@@ -74,8 +69,8 @@ reviewsReadMore.forEach((elem) => {
     reviewsItemBody.forEach((value) => {
       if (elem.parentElement === value.parentElement) {
         value.classList.toggle('reviews__item-body--full');
-        value.classList.contains('reviews__item-body--full') ? 
-          elem.children.item(0).textContent = 'Свернуть отзыв' : 
+        value.classList.contains('reviews__item-body--full') ?
+          elem.children.item(0).textContent = 'Свернуть отзыв' :
           elem.children.item(0).textContent = 'Читать весь отзыв';
       }
     })
@@ -83,7 +78,6 @@ reviewsReadMore.forEach((elem) => {
 })
 
 //Сворачивание и разворачивание текста услуги на странице consulting
-
 let consultReadMore = document.querySelectorAll('.consult-inner__item-controller');
 let consultItemBody = document.querySelectorAll('.consult-inner__item-text');
 
@@ -92,8 +86,8 @@ consultReadMore.forEach((elem) => {
     consultItemBody.forEach((value) => {
       if (elem.parentElement === value.parentElement) {
         value.classList.toggle('consult-inner__item-text--full');
-        value.classList.contains('consult-inner__item-text--full') ? 
-          elem.innerHTML = 'Показывать меньше информации' : 
+        value.classList.contains('consult-inner__item-text--full') ?
+          elem.innerHTML = 'Показывать меньше информации' :
           elem.innerHTML = 'Показать всю информацию';
       }
     })
@@ -101,7 +95,6 @@ consultReadMore.forEach((elem) => {
 })
 
 //Скрытие и показ заголовка элемента в зависимости от его наполнения на странице about в блоке subject
-
 let subjectTitle = document.querySelectorAll('.subject__desc-title');
 
 window.addEventListener('load', () => {
@@ -113,7 +106,6 @@ window.addEventListener('load', () => {
 })
 
 //Скрытие и показ дополнительной информации на слайдах в блоке projects
-
 let projectsSliderItem = document.querySelectorAll('.projects__slider-item');
 let projectsLearnMore = document.querySelectorAll('.projects__bottom-learnmore');
 let projectsDesc = document.querySelectorAll('.projects__item-desc');
@@ -121,10 +113,10 @@ let projectsDesc = document.querySelectorAll('.projects__item-desc');
 projectsLearnMore.forEach((element) => {
   element.addEventListener('click', () => {
     projectsDesc.forEach((value) => {
-     if (element.parentElement.parentElement === value.parentElement) {
-      value.classList.add('projects__item-desc--active');
-      element.parentElement.classList.add('projects__item-bottomline--disable')
-     }
+      if (element.parentElement.parentElement === value.parentElement) {
+        value.classList.add('projects__item-desc--active');
+        element.parentElement.classList.add('projects__item-bottomline--disable')
+      }
     })
   })
 })
@@ -133,18 +125,14 @@ projectsSliderItem.forEach((element) => {
   element.addEventListener('mouseleave', () => {
     projectsDesc.forEach((value) => {
       projectsLearnMore.forEach((item) => {
-        value.classList.contains('projects__item-desc--active') ? 
-        value.classList.remove('projects__item-desc--active') 
-        : value;
+        value.classList.contains('projects__item-desc--active') ?
+          value.classList.remove('projects__item-desc--active')
+          : value;
 
-        item.parentElement.classList.contains('projects__item-bottomline--disable') ? 
-        item.parentElement.classList.remove('projects__item-bottomline--disable') 
-        : item;
+        item.parentElement.classList.contains('projects__item-bottomline--disable') ?
+          item.parentElement.classList.remove('projects__item-bottomline--disable')
+          : item;
       })
     })
   })
 })
-
-
-
-

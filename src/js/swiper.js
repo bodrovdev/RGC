@@ -127,28 +127,28 @@ const contacts_slider = new Swiper('.contacts__info-slider', {
   },
 });
 
-const pageName = window.location.pathname.split('/')[1].split('.')[0];
+//Отображение и смена значений максимального количества слайдов и текущего слайда на странице contacts
 let contactsSlides = document.querySelectorAll('.contacts__slider-item');
 let contactsSlidesCurrent = document.getElementById('contacts-slider-current');
 let contactsSlidesMax = document.getElementById('contacts-slider-max');
 
-function contactsSlider() {
-  if (pageName === 'contacts') {
+window.addEventListener('load', () => {
+  if (contactsSlides !== null && contactsSlidesCurrent !== null && contactsSlidesMax !== null) {
     contactsSlidesCurrent.textContent = `0${contacts_slider.activeIndex + 1}`;
 
     contactsSlides.length < 10 ?
       contactsSlidesMax.textContent = `0${contactsSlides.length}` :
       contactsSlidesMax.textContent = contactsSlides.length;
   }
-}
-
-contactsSlider();
+})
 
 contacts_slider.on('activeIndexChange', () => {
-  if (contacts_slider.activeIndex < 9) {
-    contactsSlidesCurrent.textContent = `0${contacts_slider.activeIndex + 1}`;
-  }
-  else {
-    contactsSlidesCurrent.textContent = contacts_slider.activeIndex + 1
+  if (contactsSlides !== null) {
+    if (contacts_slider.activeIndex < 9) {
+      contactsSlidesCurrent.textContent = `0${contacts_slider.activeIndex + 1}`;
+    }
+    else {
+      contactsSlidesCurrent.textContent = contacts_slider.activeIndex + 1
+    }
   }
 })

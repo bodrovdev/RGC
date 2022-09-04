@@ -1,6 +1,3 @@
-const pageName = window.location.pathname.split('/')[1].split('.')[0];
-const isFollowedPage = window.location.href.split('').includes('#');
-
 let mainConsultTabsButtons = document.querySelectorAll('.consult-tabs__button');
 let mainConsultTabsItems = document.querySelectorAll('.consult-tabs__item');
 let consultFooterLinks = document.querySelectorAll('.footer-main__consult-link');
@@ -19,11 +16,10 @@ mainConsultTabsButtons.forEach((button) => {
   })
 })
 
-
 //Открытие таба при переходе на страницу по ссылке из футера
 window.addEventListener('load', () => {
-  if (pageName === 'consulting' && isFollowedPage === true) {
-    const mainConsultLinkId = window.location.href.split('#')[1];
+  if (mainConsultTabsItems !== null && mainConsultTabsItems !== null && Boolean(window.location.hash)) {
+    const mainConsultLinkId = window.location.hash.split('#')[1];
 
     mainConsultTabsButtons.forEach((child) => child.classList.remove('consult-tabs__button--active'));
     mainConsultTabsItems.forEach((child) => child.classList.remove('consult-tabs__item--active'));
@@ -35,7 +31,7 @@ window.addEventListener('load', () => {
 
 //Открытие таба при нажатии на ссылку из футера на той же странице
 consultFooterLinks.forEach((link) => {
-  if (pageName === 'consulting') {
+  if (mainConsultTabsItems !== null && mainConsultTabsItems !== null) {
     link.addEventListener('click', () => {
       const mainConsultLinkTarget = link.href.split('#')[1];
 

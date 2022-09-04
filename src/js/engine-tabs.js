@@ -1,6 +1,3 @@
-const pageName = window.location.pathname.split('/')[1].split('.')[0];
-const isFollowedPage = window.location.href.split('').includes('#');
-
 let mainEngineTabsButtons = document.querySelectorAll('.engine-tabs__button');
 let mainEngineTabsItems = document.querySelectorAll('.engine-tabs__item');
 let engineFooterLinks = document.querySelectorAll('.footer-main__engine-link');
@@ -19,11 +16,10 @@ mainEngineTabsButtons.forEach((button) => {
   })
 })
 
-
 //Открытие таба при переходе на страницу по ссылке из футера
 window.addEventListener('load', () => {
-  if (pageName === 'engineering' && isFollowedPage === true) {
-    const mainEngineLinkId = window.location.href.split('#')[1];
+  if (mainEngineTabsItems !== null && mainEngineTabsItems !== null && Boolean(window.location.hash)) {
+    const mainEngineLinkId = window.location.hash.split('#')[1];
 
     mainEngineTabsButtons.forEach((child) => child.classList.remove('engine-tabs__button--active'));
     mainEngineTabsItems.forEach((child) => child.classList.remove('engine-tabs__item--active'));
@@ -35,7 +31,7 @@ window.addEventListener('load', () => {
 
 //Открытие таба при нажатии на ссылку из футера на той же странице
 engineFooterLinks.forEach((link) => {
-  if (pageName === 'engineering') {
+  if (mainEngineTabsItems !== null && mainEngineTabsItems !== null) {
     link.addEventListener('click', () => {
       const mainEngineLinkTarget = link.href.split('#')[1];
 

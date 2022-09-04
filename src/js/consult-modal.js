@@ -1,7 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 //Открытие модального окна "заказать консультацию"
-
 let consultModal = document.getElementById('consult-modal');
 let consultModalOpen = document.querySelectorAll('.consult-modal-button');
 let consultModalClose = document.getElementById('consult-modal-close');
@@ -29,7 +28,6 @@ consultModal.addEventListener('click', (e) => {
 })
 
 //Вывод сообщения об успешной отправки формы
-
 let consultModalMain = document.getElementById('consult-modal-main');
 let consultModalForm = document.getElementById('consult-modal-form');
 let consultModalSuccess = document.getElementById('consult-modal-success');
