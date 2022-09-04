@@ -132,20 +132,13 @@ let contactsSlides = document.querySelectorAll('.contacts__slider-item');
 let contactsSlidesCurrent = document.getElementById('contacts-slider-current');
 let contactsSlidesMax = document.getElementById('contacts-slider-max');
 
-function contactsSlider() {
-  if (pageName !== 'contacts') {
-    return;
-  }
-  else {
-    contactsSlidesCurrent.textContent = `0${contacts_slider.activeIndex + 1}`;
+if (pageName === 'contacts') {
+  contactsSlidesCurrent.textContent = `0${contacts_slider.activeIndex + 1}`;
 
-    contactsSlides.length < 10 ?
-      contactsSlidesMax.textContent = `0${contactsSlides.length}` :
-      contactsSlidesMax.textContent = contactsSlides.length;
-  }
+  contactsSlides.length < 10 ?
+    contactsSlidesMax.textContent = `0${contactsSlides.length}` :
+    contactsSlidesMax.textContent = contactsSlides.length;
 }
-
-contactsSlider();
 
 contacts_slider.on('activeIndexChange', () => {
   if (contacts_slider.activeIndex < 9) {
