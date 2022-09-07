@@ -1,3 +1,3 @@
 # RGC
-📈 Promo website
+📈 Promo website \
 https://bodrovdev.github.io/RGC/
