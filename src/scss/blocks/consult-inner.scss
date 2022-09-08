@@ -151,19 +151,27 @@
     }
   }
 
-  &__item-title {
-    margin-bottom: 60px;
+  &__item-info-text h2 {
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 700;
+    color: var(--color-mine-shaft);
+
+    margin: 0 0 60px 0;
 
     @include mixins.respond-to(mobileOnly) {
-      margin-bottom: 20px;
+      font-size: 25px;
+      line-height: 130%;
+      
+      margin: 0 0 20px;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin-bottom: 20px;
+      margin: 0 0 20px;
     }
   }
 
-  &__item-text {
+  &__item-info-text p {
     display: inline-block;
 
     max-width: 685px;
@@ -173,19 +181,30 @@
     line-height: 27px;
     color: var(--color-mine-shaft);
 
-    margin-bottom: 40px;
+    margin: 0;
+  }
 
-    &:not(.consult-inner__item-text--full) {
-      @include mixins.line-clamp(8);
-    }
+  &__item-info-text {
+    margin: 0 0 40px 0;
 
     @include mixins.respond-to(mobileOnly) {
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
     }
+  }
+
+  &__item-info-text p:not(.consult-inner__item-info-text--full p) {
+    @include mixins.line-clamp(8);
+  }
+
+  .consult-inner__item-info-text--full p {
+    display: inline-block;
+    -webkit-line-clamp: none;
+    -webkit-box-orient: vertical;
+    overflow: visible;
   }
 
   &__item-controller {
@@ -246,19 +265,19 @@
     }
   }
 
-  &__service-title {
-    margin-bottom: 60px;
+  &__service-container h2 {
+    margin: 0 0 60px 0;
 
     @include mixins.respond-to(mobileOnly) {
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
     }
   }
 
-  &__service-text {
+  &__service-container p {
     display: inline-block;
 
     max-width: calc(100% - 200px);
@@ -267,6 +286,8 @@
     font-size: 18px;
     line-height: 27px;
     color: var(--color-mine-shaft);
+
+    margin: 0;
 
     @include mixins.respond-to(mobileOnly) {
       max-width: 100%;

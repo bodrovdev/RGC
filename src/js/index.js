@@ -79,14 +79,14 @@ reviewsReadMore.forEach((elem) => {
 
 //Сворачивание и разворачивание текста услуги на странице consulting
 let consultReadMore = document.querySelectorAll('.consult-inner__item-controller');
-let consultItemBody = document.querySelectorAll('.consult-inner__item-text');
+let consultItemBody = document.querySelectorAll('.consult-inner__item-info-text');
 
 consultReadMore.forEach((elem) => {
   elem.addEventListener('click', () => {
     consultItemBody.forEach((value) => {
       if (elem.parentElement === value.parentElement) {
-        value.classList.toggle('consult-inner__item-text--full');
-        value.classList.contains('consult-inner__item-text--full') ?
+        value.classList.toggle('consult-inner__item-info-text--full');
+        value.classList.contains('consult-inner__item-info-text--full') ?
           elem.innerHTML = 'Показывать меньше информации' :
           elem.innerHTML = 'Показать всю информацию';
       }
