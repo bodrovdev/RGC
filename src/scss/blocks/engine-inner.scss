@@ -49,7 +49,7 @@
   .engine-inner__bottom-container {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: center;
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
@@ -86,13 +86,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
   }
 
   &__middle-column {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: center;
 
     width: 100%;
 
@@ -317,14 +316,22 @@
     line-height: 27px;
     color: var(--color-mine-shaft);
 
-    margin: 0 0 40px 0;
+    margin: 0;
+
+    &:first-of-type {
+      margin: 0 0 40px 0;
+    }
 
     @include mixins.respond-to(mobileOnly) {
-      margin: 0 0 20px 0;
+      &:first-of-type {
+        margin: 0 0 20px 0;
+      }
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin: 0 0 20px 0;
+      &:first-of-type {
+        margin: 0 0 20px 0;
+      }
     }
   }
 
@@ -358,14 +365,22 @@
     line-height: 27px;
     color: var(--color-mine-shaft);
 
-    margin: 0 0 40px 0;
+    margin: 0;
+
+    &:first-of-type {
+      margin: 0 0 40px 0;
+    }
 
     @include mixins.respond-to(mobileOnly) {
-      margin: 0 0 20px 0;
+      &:first-of-type {
+        margin: 0 0 20px 0;
+      }
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin: 0 0 20px 0;
+      &:first-of-type {
+        margin: 0 0 20px 0;
+      }
     }
   }
 
@@ -375,17 +390,17 @@
     font-weight: 700;
     color: var(--color-mine-shaft);
 
-    margin-bottom: 60px;
+    margin: 0 0 60px 0;
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 25px;
       line-height: 130%;
 
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
     }
   }
 
@@ -399,14 +414,22 @@
     line-height: 27px;
     color: var(--color-mine-shaft);
 
-    margin: 0 0 40px 0;
+    margin: 0;
+
+    &:first-of-type {
+      margin: 0 0 40px 0;
+    }
 
     @include mixins.respond-to(mobileOnly) {
-      margin: 0 0 20px 0;
+      &:first-of-type {
+        margin: 0 0 20px 0;
+      }
     }
 
     @include mixins.respond-to(tabletOnly) {
-      margin: 0 0 20px 0;
+      &:first-of-type {
+        margin: 0 0 20px 0;
+      }
     }
   }
 
@@ -489,4 +512,11 @@
       max-width: 100%;
     }
   }
+}
+
+.engine-inner__top-info-text,
+.engine-inner__bottom-info-text,
+.engine-inner__middle-info-text {
+  display: flex;
+  flex-direction: column;
 }
