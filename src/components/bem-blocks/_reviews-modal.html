@@ -5,20 +5,23 @@
     </button>
     <div class="reviews-modal__inner" id="reviews-modal-main">
       <h2 class="reviews-modal__title base-title">Оставить отзыв</h2>
-      <form class="reviews-modal__form" id="reviews-modal-form"r>
+      <form class="reviews-modal__form" id="reviewsModalForm">
         <div class="reviews-modal__form-inner">
           <div class="reviews-modal__form-column">
             <input class="reviews-modal__form-input" type="text" placeholder="ФИО" required>
             <input class="reviews-modal__form-input" type="email" placeholder="Email" required>
             <input class="reviews-modal__form-input" type="text" placeholder="Организация" required>
-            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1" required>
-            <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить фото</button>
+            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviewsModalFileInput"
+              accept=".jpg,.jpeg,.png" tabindex="-1" required>
+            <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить
+              фото</button>
           </div>
-          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв" required></textarea>
+          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв"
+            required></textarea>
         </div>
         <div class="reviews-modal__form-underline">
           <span class="reviews-modal__form-desc">
-            Нажимая на кнопку отправить, вы подтверждаете 
+            Нажимая на кнопку отправить, вы подтверждаете
             свое согласие на обработку пользовательских данных
           </span>
           <button class="reviews-modal__form-submit base-button" type="submit">
