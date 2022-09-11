@@ -47,6 +47,7 @@
       justify-content: flex-start;
 
       width: 71.5%;
+      max-width: 1280px;
     }
   }
 
@@ -60,7 +61,7 @@
 
     &:hover {
       color: var(--color-buttercup);
-      
+
       transition: all 0.3s;
     }
 
@@ -97,7 +98,7 @@
 
   &__copyright {
     user-select: none;
-    
+
     font-family: var(--font-family-footer) !important;
     font-weight: 400;
     color: var(--color-black);
@@ -124,8 +125,8 @@
   @media (min-width: 1700px) {
     &__copyright {
       margin-right: 430px;
-    }    
-  } 
+    }
+  }
 
   &__credits-link {
     display: flex;
@@ -184,6 +185,6 @@
 
       transition: all 0.1s;
     }
-    
+
   }
 }
