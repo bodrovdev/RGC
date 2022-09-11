@@ -22,7 +22,7 @@
 </head>
 
 <body>
-	<section class="success-modal" id="success-modal">
+	<section class="success-modal" id="successModal">
   <div class="success-modal__wrapper">
     <button class="success-modal__close-button base-button" id="success-modal-close">
       <div class="success-modal__close-inner"></div>
@@ -43,7 +43,7 @@
     </button>
     <div class="consult-modal__inner" id="consult-modal-main">
       <h2 class="consult-modal__title base-title">Заказать консультацию</h2>
-      <form class="consult-modal__form" method="post" id="consult-modal-form">
+      <form class="consult-modal__form" method="post" id="consultModalForm">
         <input class="consult-modal__input" type="text" placeholder="Ваше имя" required>
         <input class="consult-modal__input" type="tel" placeholder="Телефон" required>
         <input class="consult-modal__input" type="email" placeholder="Email">
@@ -55,8 +55,8 @@
         </button>
       </form>
       <p class="consult-modal__datacheck base-par">
-        Нажимая на кнопку отправить, вы подтверждаете 
-        свое согласие на обработку 
+        Нажимая на кнопку отправить, вы подтверждаете
+        свое согласие на обработку
         пользовательских данных
       </p>
     </div>
@@ -76,20 +76,23 @@
     </button>
     <div class="reviews-modal__inner" id="reviews-modal-main">
       <h2 class="reviews-modal__title base-title">Оставить отзыв</h2>
-      <form class="reviews-modal__form" id="reviews-modal-form"r>
+      <form class="reviews-modal__form" id="reviewsModalForm">
         <div class="reviews-modal__form-inner">
           <div class="reviews-modal__form-column">
             <input class="reviews-modal__form-input" type="text" placeholder="ФИО" required>
             <input class="reviews-modal__form-input" type="email" placeholder="Email" required>
             <input class="reviews-modal__form-input" type="text" placeholder="Организация" required>
-            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviews-modal-file-input" accept=".jpg,.jpeg,.png" tabindex="-1" required>
-            <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить фото</button>
+            <input class="reviews-modal__file-input visually-hidden" type="file" id="reviewsModalFileInput"
+              accept=".jpg,.jpeg,.png" tabindex="-1" required>
+            <button class="reviews-modal__file-loader base-button" type="button" id="reviews-modal-file-button">Добавить
+              фото</button>
           </div>
-          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв" required></textarea>
+          <textarea class="reviews-modal__form-column reviews-modal__form-textarea" placeholder="Напишите отзыв"
+            required></textarea>
         </div>
         <div class="reviews-modal__form-underline">
           <span class="reviews-modal__form-desc">
-            Нажимая на кнопку отправить, вы подтверждаете 
+            Нажимая на кнопку отправить, вы подтверждаете
             свое согласие на обработку пользовательских данных
           </span>
           <button class="reviews-modal__form-submit base-button" type="submit">
@@ -956,7 +959,7 @@
           заполните свои контактные данные
         </span>
       </div>
-      <form class="footer-feedback__form" method="post" id="success-modal-form">
+      <form class="footer-feedback__form success-modal-form" method="post" id="footerCallbackForm">
         <div class="footer-feedback__form-fields">
           <div class="footer-feedback__form-column">
             <input type="tel" class="footer-feedback__form-input" placeholder="Телефон" required>
