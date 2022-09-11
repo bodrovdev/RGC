@@ -29,7 +29,7 @@ consultModal.addEventListener('click', (e) => {
 
 //Вывод сообщения об успешной отправки формы
 let consultModalMain = document.getElementById('consult-modal-main');
-let consultModalForm = document.getElementById('consult-modal-form');
+let consultModalForm = document.getElementById('consultModalForm');
 let consultModalSuccess = document.getElementById('consult-modal-success');
 
 consultModalForm.addEventListener('submit', (e) => {

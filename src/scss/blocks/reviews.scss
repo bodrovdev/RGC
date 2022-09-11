@@ -114,7 +114,35 @@
   }
 
   &__item-body {
+    position: relative;
+
+    max-height: 320px;
+    overflow: hidden;
+
+    line-height: calc(27px * 12);
+
     margin-bottom: 16px;
+
+    &::after {
+      content: "";
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70%;
+      height: 1.2em;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+    }
+  }
+
+  &__item-body--full {
+    max-height: initial;
+    line-height: initial;
+    overflow: visible;
+    
+    &::after {
+      display: none;
+    }
   }
 
   &__item-body p {
@@ -134,10 +162,6 @@
     @include mixins.respond-to(tabletOnly) {
       max-width: 100%;
     }
-  }
-
-  &__item-body:not(.reviews__item-body--full) {
-    @include mixins.line-clamp(12);
   }
 
   &__item-controller {

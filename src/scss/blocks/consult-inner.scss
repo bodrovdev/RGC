@@ -151,6 +151,29 @@
     }
   }
 
+  &__item-info-text {
+    max-height: 240px;
+    overflow: hidden;
+
+    line-height: calc(27px * 8);
+
+    margin: 0 0 40px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 20px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__item-info-text--full {
+    max-height: initial;
+    line-height: initial;
+    overflow: visible;
+  }
+
   &__item-info-text h2 {
     font-size: 40px;
     line-height: 47px;
@@ -182,29 +205,6 @@
     color: var(--color-mine-shaft);
 
     margin: 0;
-  }
-
-  &__item-info-text {
-    margin: 0 0 40px 0;
-
-    @include mixins.respond-to(mobileOnly) {
-      margin: 0 0 20px 0;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      margin: 0 0 20px 0;
-    }
-  }
-
-  &__item-info-text p:not(.consult-inner__item-info-text--full p) {
-    @include mixins.line-clamp(8);
-  }
-
-  .consult-inner__item-info-text--full p {
-    display: inline-block;
-    -webkit-line-clamp: none;
-    -webkit-box-orient: vertical;
-    overflow: visible;
   }
 
   &__item-controller {

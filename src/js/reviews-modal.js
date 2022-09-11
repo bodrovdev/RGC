@@ -41,7 +41,7 @@ reviewsModalFunctions();
 //Вывод сообщения об успешной отправки формы
 
 let reviewsModalMain = document.getElementById('reviews-modal-main');
-let reviewsModalForm = document.getElementById('reviews-modal-form');
+let reviewsModalForm = document.getElementById('reviewsModalForm');
 let reviewsModalSuccess = document.getElementById('reviews-modal-success');
 
 function reviewsModalForms() {
@@ -61,7 +61,7 @@ reviewsModalForms();
 
 //Обработка добавления файлов к форме, просмотр имени файла
 
-let reviewsModalFileInput = document.getElementById('reviews-modal-file-input');
+let reviewsModalFileInput = document.getElementById('reviewsModalFileInput');
 let reviewsModalFileButton = document.getElementById('reviews-modal-file-button');
 
 function reviewsModalFiles() {

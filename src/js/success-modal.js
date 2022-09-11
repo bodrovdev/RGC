@@ -2,8 +2,8 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 //Открытие модального окна с сообщением об успехе
 
-let successModal = document.getElementById('success-modal');
-let successModalForm = document.querySelectorAll('#success-modal-form');
+let successModal = document.getElementById('successModal');
+let successModalForm = document.querySelectorAll('.success-modal-form');
 let successModalClose = document.getElementById('success-modal-close');
 
 successModalForm.forEach((element) => {

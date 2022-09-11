@@ -17,11 +17,21 @@
     flex-direction: column;
   }
 
-  &__guide-title {
-    margin-bottom: 20px;
+  &__guide-container h2 {
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 700;
+    color: var(--color-mine-shaft);
+
+    margin: 0 0 20px 0;
+  
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 25px;
+      line-height: 130%;
+    }
   }
 
-  &__guide-text {
+  &__guide-container p {
     display: inline-block;
 
     font-family: var(--font-family-footer);
@@ -29,6 +39,8 @@
     font-size: 16px;
     line-height: 24px;
     color: var(--color-black);
+
+    margin: 0;
 
     @include mixins.respond-to(mobileOnly) {
       max-width: 100%;
