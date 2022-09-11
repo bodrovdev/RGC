@@ -13,9 +13,9 @@ successModalForm.forEach((element) => {
     successModal.classList.add('success-modal--opened');
     disableBodyScroll(element);
 
-    Array.from(element.elements).filter(tag => ["input", "textarea"]).forEach((item) => {
-      item.value = '';
-    })
+    // Array.from(element.elements).filter(tag => ["input", "textarea"]).forEach((item) => {
+    //   item.value = '';
+    // })
   })
 })
 
